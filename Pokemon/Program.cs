@@ -14,7 +14,7 @@ namespace Pokemon
             // Test case: Eric 5/23/2014
             Engine.ReadXML("..//..//xml//pokemon.xml");
 
-            Console.WriteLine("If you see me, this didn't crash (unlikely).");
+            Console.WriteLine("If you see me, this didn't crash.");
             Console.ReadLine();
         }
     }
