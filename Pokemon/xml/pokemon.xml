@@ -259,6 +259,9 @@
     </learnSet>
   </pokemon>
 	<!--010: Caterpie-->
+	<pokemon name="Caterpie">
+		<!-- TODO: Finish this -->
+	</pokemon>
 	<!--011: Metapod-->
 	<!--012: Butterfree-->
 	<!--013: Weedle-->
