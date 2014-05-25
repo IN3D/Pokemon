@@ -30,6 +30,8 @@ namespace Pokemon
         int Level { get; set; }
         int XP { get; set; }
         int[] stats = new int[6];
+        int[] EVs = new int[6];
+        int[] IVs = new int[6];
         string Name { get; set; }
         // TODO: create Attacks class
         // TODO: create LevelGroup class
