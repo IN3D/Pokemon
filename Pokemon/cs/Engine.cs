@@ -27,38 +27,43 @@ namespace Pokemon
 {
     public static class Engine
     {
-        public static void ReadXML(string fileLocation)
+
+        public static void ReadXML(string fileLocation, ref LinkedList<Pokemon> list)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(fileLocation);
 
             foreach (XmlNode node in doc.DocumentElement)
             {
+                
+
                 if (node.NodeType != XmlNodeType.Comment)
                 {
-                    Console.WriteLine("Name: " + node.Attributes.GetNamedItem("name").Value);
-                    Console.WriteLine("\tDexNumber: " + node.ChildNodes.Item(0).InnerText);
-                    Console.WriteLine("\tCatch Rate: " + node.ChildNodes.Item(1).InnerText);
-                    Console.WriteLine("\tLevel Group: " + node.ChildNodes.Item(2).InnerText);
+                    string name = node.Attributes.GetNamedItem("name").Value;
+                    int dexNum = int.Parse(node.ChildNodes.Item(0).InnerText);
+                    int catchRate = int.Parse(node.ChildNodes.Item(1).InnerText);
+                    // Levelgroup not yet used
                     bool genderless = node.ChildNodes.Item(3).InnerText != "0";
-                    Console.WriteLine("\tGenderless: " + genderless.ToString());
-                    Console.WriteLine("\tTypes: ");
-                    int i = 1;
+
+                    // just do types as strings for now
+                    string[] types = new string[2];
+                    int i = 0;
                     foreach (XmlNode n in node.ChildNodes.Item(4))
                     {
-                        Console.WriteLine("\t\tType " + i + ": " + n.InnerText);
+                        types[i] = n.InnerText;
                         i++;
                     }
-                    Console.WriteLine("\tStats: ");
+
+                    int[] baseStats = new int[6];
+                    int x = 0;
                     foreach (XmlNode n in node.ChildNodes.Item(5))
                     {
-                        Console.WriteLine("\t\t" + n.Attributes.GetNamedItem("name").Value + ": " + n.InnerText);
+                        baseStats[x] = int.Parse(n.InnerText);
+                        x++;
                     }
-                    Console.WriteLine("\tLearn Set: ");
-                    foreach(XmlNode n in node.ChildNodes.Item(6))
-                    {
-                        Console.WriteLine("\t\tlvl. " + n.Attributes.GetNamedItem("level").Value + ": " + n.InnerText);
-                    }
+
+                    // TODO: attacks not yet implemented
+                    list.AddLast(new Pokemon(name, dexNum, genderless, baseStats, types));
                 }
             }
         }

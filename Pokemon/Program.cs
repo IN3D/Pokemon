@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
 
             // Test case: Eric 5/23/2014
-            Engine.ReadXML("..//..//xml//pokemon.xml");
+            Engine.ReadXML("..//..//xml//pokemon.xml", ref pokemonMasterList);
 
-            Console.WriteLine("If you see me, this didn't crash.");
+            Console.WriteLine("pokemon.xml file read in successfully\n=====================================");
+
+            foreach (Pokemon pkm in pokemonMasterList)
+            {
+                Console.WriteLine(pkm.Name);
+            }
+
+            Console.Write(">: ");
             Console.ReadLine();
         }
     }

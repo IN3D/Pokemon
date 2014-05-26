@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    class Pokemon
+    public class Pokemon
     {
         protected
         bool isGenderless { get; set; }
@@ -33,14 +33,33 @@ namespace Pokemon
         int[] EVs = new int[6];
         int[] IVs = new int[6];
         int[] stats = new int[6];
-        string Name { get; set; }
+        public string Name { get; set; }
+        string[] types = new string[2]; // NOTE: This is temporary
         // TODO: create Abilities class
         // TODO: create Attacks class
         // TODO: create LevelGroup class
         // TODO: create Type class
 
+        // Constructor: Base Data
+        public Pokemon(string name, int dexNum, bool genderless, int[] baseStats, string[] types)
+        {
+            this.Name = name;
+            this.DexNumber = dexNum;
+            this.isGenderless = genderless;
+
+            for(int i = 0; i < 6; i++)
+            {
+                this.baseStats[i] = baseStats[i];
+            }
+
+            for(int i = 0; i < types.Length; i++)
+            {
+                this.types[i] = types[i];
+            }
+        }
+
         // Constructor: Wild Pokemon
-        Pokemon(Pokemon basePkm, int areaLow, int areaHigh)
+        public Pokemon(Pokemon basePkm, int areaLow, int areaHigh)
         {
             Random rnd = new Random();
             
