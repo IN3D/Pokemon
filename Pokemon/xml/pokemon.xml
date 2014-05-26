@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--
-	Pokemon: Infinite (Project name, I guess?)
+	Pokemon: Infinite
 	A Recreation of Pokemon for the PC, written in C#
 	
 	==Created==
@@ -260,7 +260,26 @@
   </pokemon>
 	<!--010: Caterpie-->
 	<pokemon name="Caterpie">
-		<!-- TODO: Finish this -->
+		<dexNumber>10</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+		</types>
+		<stats>
+			<stat name="HP">45</stat>
+			<stat name="Attack">30</stat>
+			<stat name="Defense">35</stat>
+			<stat name="Sp.Attack">20</stat>
+			<stat name="Sp.Defense">20</stat>
+			<stat name="Speed">45</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">String Shot</move>
+			<move level="15">Bug Bite</move>
+		</learnSet>
 	</pokemon>
 	<!--011: Metapod-->
 	<!--012: Butterfree-->
