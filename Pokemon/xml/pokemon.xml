@@ -333,8 +333,78 @@
 		</learnSet>
 	</pokemon>
 	<!--013: Weedle-->
+	<pokemon name="Weedle">
+		<dexNumber>13</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+			<type>Poison</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">35</stat>
+			<stat name="Defense">30</stat>
+			<stat name="Sp.Attack">20</stat>
+			<stat name="Sp.Defense">20</stat>
+			<stat name="Speed">50</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Poison Sting</move>
+			<move level="0">String Shot</move>
+			<move level="15">Bug Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--014: Kakuna-->
+	<pokemon name="Kakuna">
+		<dexNumber>14</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+			<type>Poison</type>
+		</types>
+		<stats>
+			<stat name="HP">45</stat>
+			<stat name="Attack">25</stat>
+			<stat name="Defense">50</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">25</stat>
+			<stat name="Speed">35</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Harden</move>
+			<move level="7">Harden</move>
+		</learnSet>
+	</pokemon>
 	<!--015: Beedrill-->
+	<pokemon name="Beedrill">
+		<dexNumber>15</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+			<type>Poison</type>
+		</types>
+		<stats>
+			<stat name="HP">65</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">45</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">75</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Fury Attack</move>
+			<move level="10">Fury Attack</move>
+			<move level="13">Focus Energy</move>
+			<move level="16">Twineedle</move>
+			<!-- TODO: Finsh learnset -->
+		</learnSet>
+	</pokemon>
 	<!--016: Pidgey-->
 	<!--017: Pidgeotto-->
 	<!--018: Pidgeot-->
