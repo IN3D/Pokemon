@@ -538,11 +538,166 @@
 		</learnSet>
 	</pokemon>
 	<!--021: Spearow-->
+	<pokemon name="Spearow">
+		<dexNumber>21</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">30</stat>
+			<stat name="Sp.Attack">31</stat>
+			<stat name="Sp.Defense">31</stat>
+			<stat name="Speed">70</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Peck</move>
+			<move level="0">Growl</move>
+			<move level="5">Leer</move>
+			<move level="9">Fury Attack</move>
+			<move level="13">Pursuit</move>
+		</learnSet>
+	</pokemon>
 	<!--022: Fearow-->
+	<pokemon name="Fearow">
+		<dexNumber>22</dexNumber>
+		<catchRate>90</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">65</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">65</stat>
+			<stat name="Sp.Attack">61</stat>
+			<stat name="Sp.Defense">61</stat>
+			<stat name="Speed">100</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Drill Run</move>
+			<move level="0">Pluck</move>
+			<move level="0">Peck</move>
+			<move level="0">Growl</move>
+			<move level="0">Leer</move>
+			<move level="0">Fury Attack</move>
+			<move level="5">Leer</move>
+			<move level="9">Fury Attack</move>
+			<move level="13">Pursuit</move>
+		</learnSet>
+	</pokemon>
 	<!--023: Ekans-->
+	<pokemon name="Ekans">
+		<dexNumber>23</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Poison</type>
+		</types>
+		<stats>
+			<stat name="HP">35</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">44</stat>
+			<stat name="Sp.Attack">40</stat>
+			<stat name="Sp.Defense">54</stat>
+			<stat name="Speed">55</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Warp</move>
+			<move level="0">Leer</move>
+			<move level="4">Poison Sting</move>
+			<move level="9">Bite</move>
+			<move level="12">Glare</move>
+			<move level="17">Screech</move>
+		</learnSet>
+	</pokemon>
 	<!--024: Arbok-->
+	<pokemon name="Arbok">
+		<dexNumber>24</dexNumber>
+		<catchRate>90</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Poison</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">85</stat>
+			<stat name="Defense">69</stat>
+			<stat name="Sp.Attack">65</stat>
+			<stat name="Sp.Defense">79</stat>
+			<stat name="Speed">80</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Ice Fang</move>
+			<move level="0">Thunder Fang</move>
+			<move level="0">Fire Fang</move>
+			<move level="0">Wrap</move>
+			<move level="0">Leer</move>
+			<move level="0">Poison Sting</move>
+			<move level="0">Bite</move>
+			<move level="4">Poison Sting</move>
+			<move level="9">Bite</move>
+			<move level="12">Glare</move>
+		</learnSet>
+	</pokemon>
 	<!--025: Pikachu-->
+	<pokemon name="Pikachu">
+		<dexNumber>25</dexNumber>
+		<catchRate>190</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Electric</type>
+		</types>
+		<stats>
+			<stat name="HP">35</stat>
+			<stat name="Attack">55</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">50</stat>
+			<stat name="Speed">90</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Thunder Shock</move>
+			<move level="0">Tail Whip</move>
+			<move level="5">Growl</move>
+			<move level="7">Play Nice</move>
+			<move level="10">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--026: Raichu-->
+	<pokemon name="Raichu">
+		<dexNumber>26</dexNumber>
+		<catchRate>75</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Electric</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">90</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">110</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Thunder Shock</move>
+			<move level="0">Tail Whip</move>
+			<move level="0">Quick Attack</move>
+			<move level="0">Thunderbolt</move>
+		</learnSet>
+	</pokemon>
 	<!--027: Sandshrew-->
 	<!--028: Sandslash-->
 	<!--029: Nidoran f-->
