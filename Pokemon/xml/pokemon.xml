@@ -304,6 +304,34 @@
 		</learnSet>
 	</pokemon>
 	<!--012: Butterfree-->
+	<pokemon name="Butterfree">
+		<dexNumber>12</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">45</stat>
+			<stat name="Defense">50</stat>
+			<stat name="Sp.Attack">90</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">70</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Confusion</move>
+			<move level="7">confusion</move>
+			<move level="12">Poison Powder</move>
+			<move level="12">Stun Spore</move>
+			<move level="12">Sleep Powder</move>
+			<move level="16">Gust</move>
+			<move level="18">Supersonic</move>
+			<!-- TODO: Finish -->
+		</learnSet>
+	</pokemon>
 	<!--013: Weedle-->
 	<!--014: Kakuna-->
 	<!--015: Beedrill-->
