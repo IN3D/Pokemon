@@ -406,10 +406,137 @@
 		</learnSet>
 	</pokemon>
 	<!--016: Pidgey-->
+	<pokemon name="Pidgey">
+		<dexNumber>16</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumSlow</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">45</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">35</stat>
+			<stat name=Sp.Defense">35</stat>
+			<stat name="Speed">56</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--017: Pidgeotto-->
+	<pokemon name="Pidgeotto">
+		<dexNumber>17</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumSlow</catchRate>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">63</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">50</stat>
+			<stat name="Speed">71</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Sand Attack</move>
+			<move level="0">Gust</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--018: Pidgeot-->
+	<pokemon name="Pidgeot">
+		<dexNumber>18</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumSlow</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+			<type>Flying</type>
+		</types>
+		<stats>
+			<stat name="HP">83</stat>
+			<stat name="Attack">80</stat>
+			<stat name="Defense">75</stat>
+			<stat name="Sp.Attack">70</stat>
+			<stat name="Sp.Defense">70</stat>
+			<stat name="Speed">101</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Hurricane</move>
+			<move level="0">Tackle</move>
+			<move level="0">Sand Attack</move>
+			<move level="0">Gust</move>
+			<move level="0">Quick Attack</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--019: Rattata-->
+	<pokemon name="Rattata">
+		<dexNumber>19</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+		</types>
+		<stats>
+			<stat name="HP">30</stat>
+			<stat name="Attack">56</stat>
+			<stat name="Defense">35</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">35</stat>
+			<stat name="Speed">72</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Tail Whip</move>
+			<move level="4">Quick Attack</move>
+			<move level="7">Focus Energy</move>
+			<move level="10">Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--020: Raticate-->
+	<pokemon name="Raticate">
+		<dexNumber>20</dexNumber>
+		<catchRate>127</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Normal</type>
+		</types>
+		<stats>
+			<stat name="HP">55</stat>
+			<stat name="Attack">81</stat>
+			<stat name="Defense">60</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">70</stat>
+			<stat name="Speed">97</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Tail Whip</move>
+			<move level="0">Swords Dance</move>
+			<move level="4">Quick Attack</move>
+			<move level="7">Focus Energy</move>
+			<move level="10">Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--021: Spearow-->
 	<!--022: Fearow-->
 	<!--023: Ekans-->
