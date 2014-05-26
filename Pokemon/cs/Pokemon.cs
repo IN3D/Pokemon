@@ -86,5 +86,37 @@ namespace Pokemon
 
             this.Gender = rnd.Next(1, 2);
         }
+
+
+        public void debugBaseInfo()
+        {
+            Console.WriteLine("Name: " + this.Name);
+            string idFormat = this.DexNumber.ToString("D3");
+            Console.WriteLine("\tDexNumber: " + idFormat);
+            Console.WriteLine("\tCatch Rate: " + this.CatchRate);
+            string noGender = this.isGenderless.ToString();
+            Console.WriteLine("\tGenderless: " + noGender);
+
+            Console.WriteLine("\tTypes: ");
+            for (int i = 0; i < this.types.Length; i++)
+            {
+                if(this.types[i] != null)
+                {
+                    Console.WriteLine("\t\tType " + (i + 1) + ": " + this.types[i]);
+                }
+            }
+
+            // ====
+            Console.WriteLine("\tBase Stats: ");
+            Console.WriteLine("\t\tHP: " + this.baseStats[0]);
+            Console.WriteLine("\t\tAttack: " + this.baseStats[1]);
+            Console.WriteLine("\t\tDefense: " + this.baseStats[2]);
+            Console.WriteLine("\t\tSp.Attack: " + this.baseStats[3]);
+            Console.WriteLine("\t\tSp.Defense: " + this.baseStats[4]);
+            Console.WriteLine("\t\tSpeed: " + this.baseStats[5]);
+            // ====
+
+            Console.WriteLine();
+        }
     }
 }

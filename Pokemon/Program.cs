@@ -10,20 +10,28 @@ namespace Pokemon
     {
         static void Main(string[] args)
         {
+            // !Core game data
             LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
 
-            // Test case: Eric 5/23/2014
+
+            Program main = new Program();
             Engine.ReadXML("..//..//xml//pokemon.xml", ref pokemonMasterList);
 
             Console.WriteLine("pokemon.xml file read in successfully\n=====================================");
 
-            foreach (Pokemon pkm in pokemonMasterList)
-            {
-                Console.WriteLine(pkm.Name);
-            }
+            main.DEBUG_CheckPokemonList(ref pokemonMasterList);
 
+            // to keep the terminal open
             Console.Write(">: ");
             Console.ReadLine();
+        }
+
+        public void DEBUG_CheckPokemonList(ref LinkedList<Pokemon> list)
+        {
+            foreach (Pokemon pkm in list)
+            {
+                pkm.debugBaseInfo();
+            }
         }
     }
 }
