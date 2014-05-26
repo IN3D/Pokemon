@@ -282,6 +282,27 @@
 		</learnSet>
 	</pokemon>
 	<!--011: Metapod-->
+	<pokemon name="Metapod">
+		<dexNumber>11</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>Bug</type>
+		</types>
+		<stats>
+			<stat name="HP">50</stat>
+			<stat name="Attack">20</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">25</stat>
+			<stat name="Speed">30</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Harden</move>
+			<move level="7">Harden</move>
+		</learnSet>
+	</pokemon>
 	<!--012: Butterfree-->
 	<!--013: Weedle-->
 	<!--014: Kakuna-->
