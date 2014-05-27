@@ -14,6 +14,9 @@ Global
 		{C24BFC44-F8A8-423B-8983-3A86308009F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24BFC44-F8A8-423B-8983-3A86308009F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Pokemon.csproj
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
