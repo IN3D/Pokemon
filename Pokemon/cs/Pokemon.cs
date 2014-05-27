@@ -5,10 +5,6 @@
  * on: 5/23/2014
  * by: Eric Hopkins
  * 
- * == Last Modified ==
- * on: 25/23/2014
- * by: Eric Hopkins
- * 
  * This is the class file that is used in all instances of a pokemon.
  * 
  */
@@ -41,9 +37,10 @@ namespace Pokemon
         // TODO: create Type class
 
         // Constructor: Base Data
-        public Pokemon(string name, int dexNum, bool genderless, int[] baseStats, string[] types)
+		public Pokemon(string name, int catchRate, int dexNum, bool genderless, int[] baseStats, string[] types)
         {
             this.Name = name;
+			this.CatchRate = catchRate;
             this.DexNumber = dexNum;
             this.isGenderless = genderless;
 

@@ -5,9 +5,6 @@
  * on: 5/23/2014
  * by: Eric Hopkins
  * 
- * == Last Modified ==
- * on: 25/23/2014
- * by: Eric Hopkins
  * 
  * This file contains all the data for the game engine class. As of
  * it's creation, this will only really involve reading in the games
@@ -63,7 +60,7 @@ namespace Pokemon
                     }
 
                     // TODO: attacks not yet implemented
-                    list.AddLast(new Pokemon(name, dexNum, genderless, baseStats, types));
+					list.AddLast(new Pokemon(name, catchRate ,dexNum, genderless, baseStats, types));
                 }
             }
         }
