@@ -16,7 +16,8 @@ namespace Pokemon
             potion potion02 = new potion("Super Potion", 50);
             potion potion03 = new potion("Hyper Potion", 100);
 
-            ppItem ppItem01 = new ppItem("Ether", "Flamethrower", 10);
+            ppItem ppItem01 = new ppItem("Ether", "Flamethrower", 10); // flamethrower is a substitute for a selection in game
+
             
 
             battleItem battleItem01 = new battleItem("xAttack", "attack", 1);
