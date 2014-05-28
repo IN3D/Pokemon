@@ -16,14 +16,38 @@ namespace Pokemon
             potion potion02 = new potion("Super Potion", 50);
             potion potion03 = new potion("Hyper Potion", 100);
 
-            battleItem battleItem01 = new battleItem("xAttack", 2);
-            battleItem battleItem02 = new battleItem("Mega xAttack", 4);
+            ppItem ppItem01 = new ppItem("Ether", "Flamethrower", 10);
+            
+
+            battleItem battleItem01 = new battleItem("xAttack", "attack", 2);
+            battleItem battleItem02 = new battleItem("xDefense", "defense", 2);
+            battleItem battleItem03 = new battleItem("xSp. Attack", "sp. attack", 2);
+            battleItem battleItem04 = new battleItem("xSp. Defense", "sp. defense", 2);
+            battleItem battleItem05 = new battleItem("xSpeed", "speed", 2);
+            battleItem battleItem06 = new battleItem("xAccuracy", "accuracy", 2);
+
+            evItem evItem01 = new evItem("Protein", "attack", 10);
+            evItem evItem02 = new evItem("HP Up", "HP", 10);
+            evItem evItem03 = new evItem("Iron", "defense", 10);
+            evItem evItem04 = new evItem("Zinc", "special defense", 10);
+            evItem evItem05 = new evItem("Carbos", "speed", 10);
+            
 
             objects.AddLast(potion01);
             objects.AddLast(potion02);
             objects.AddLast(potion03);
+            objects.AddLast(ppItem01);
             objects.AddLast(battleItem01);
             objects.AddLast(battleItem02);
+            objects.AddLast(battleItem03);
+            objects.AddLast(battleItem04);
+            objects.AddLast(battleItem05);
+            objects.AddLast(battleItem06);
+            objects.AddLast(evItem01);
+            objects.AddLast(evItem02);
+            objects.AddLast(evItem03);
+            objects.AddLast(evItem04);
+            objects.AddLast(evItem05);
 
             foreach (var item in objects)
             {
