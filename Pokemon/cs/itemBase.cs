@@ -59,7 +59,7 @@ namespace Pokemon
 
         public override string use()
         {
-            return "Pokemon's " + this.TargetStat + " raised by " + this.ID.ToString() +" for this battle";
+            return "Pokemon's " + this.TargetStat + " raised by " + this.ID.ToString() + " level, for this battle";
         }
     }
 

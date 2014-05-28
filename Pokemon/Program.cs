@@ -19,12 +19,14 @@ namespace Pokemon
             ppItem ppItem01 = new ppItem("Ether", "Flamethrower", 10);
             
 
-            battleItem battleItem01 = new battleItem("xAttack", "attack", 2);
-            battleItem battleItem02 = new battleItem("xDefense", "defense", 2);
-            battleItem battleItem03 = new battleItem("xSp. Attack", "sp. attack", 2);
-            battleItem battleItem04 = new battleItem("xSp. Defense", "sp. defense", 2);
-            battleItem battleItem05 = new battleItem("xSpeed", "speed", 2);
-            battleItem battleItem06 = new battleItem("xAccuracy", "accuracy", 2);
+            battleItem battleItem01 = new battleItem("xAttack", "attack", 1);
+            battleItem battleItem02 = new battleItem("xDefense", "defense", 1);
+            battleItem battleItem03 = new battleItem("xSp. Attack", "sp. attack", 1);
+            battleItem battleItem04 = new battleItem("xSp. Defense", "sp. defense", 1);
+            battleItem battleItem05 = new battleItem("xSpeed", "speed", 1);
+            battleItem battleItem06 = new battleItem("xAccuracy", "accuracy", 1);
+            battleItem battleItem07 = new battleItem("Dire Hit", "critical hit ratio", 1);
+            
 
             evItem evItem01 = new evItem("Protein", "attack", 10);
             evItem evItem02 = new evItem("HP Up", "HP", 10);
@@ -43,6 +45,7 @@ namespace Pokemon
             objects.AddLast(battleItem04);
             objects.AddLast(battleItem05);
             objects.AddLast(battleItem06);
+            objects.AddLast(battleItem07);
             objects.AddLast(evItem01);
             objects.AddLast(evItem02);
             objects.AddLast(evItem03);
