@@ -62,6 +62,12 @@ namespace Pokemon
             // otherwise the terminal will request input after every
             // time it prints an item.
 			Engine.ReadXML("..//..//xml//pokemon.xml", ref Model.pokemonMasterList);
+			GameMath.popErratic ();
+			GameMath.popFast ();
+			GameMath.popMediumFast ();
+			GameMath.popMediumSlow ();
+			GameMath.popSlow ();
+			GameMath.popFluctuating ();
 
 			Program prog = new Program ();
 
