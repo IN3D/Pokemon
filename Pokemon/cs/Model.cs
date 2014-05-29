@@ -31,7 +31,6 @@ namespace Pokemon
 
 		public static int[] Slow = new int[100];
 
-
 		public static int[] Fluctuating = new int[100];
 		#endregion
 
