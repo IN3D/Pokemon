@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -61,7 +61,25 @@ namespace Pokemon
             // the ReadLine should be outside of your for loop,
             // otherwise the terminal will request input after every
             // time it prints an item.
+			Engine.ReadXML("..//..//xml//pokemon.xml", ref Model.pokemonMasterList);
+
+			Program prog = new Program ();
+
+            Console.WriteLine("pokemon.xml file read in successfully\n=====================================");
+
+			prog.DEBUG_ShowPokemonBaseInfo ();
+
+            // to keep the terminal open
+            Console.Write(">: ");
             Console.ReadLine();
         }
+
+		public void DEBUG_ShowPokemonBaseInfo()
+		{
+			foreach (Pokemon pkm in Model.pokemonMasterList)
+			{
+				pkm.debugBaseInfo ();
+			}
+		}
     }
 }
