@@ -11,6 +11,12 @@ namespace Pokemon
         static void Main(string[] args)
         {
 			Engine.ReadXML("..//..//xml//pokemon.xml", ref Model.pokemonMasterList);
+			GameMath.popErratic ();
+			GameMath.popFast ();
+			GameMath.popMediumFast ();
+			GameMath.popMediumSlow ();
+			GameMath.popSlow ();
+			GameMath.popFluctuating ();
 
 			Program prog = new Program ();
 
