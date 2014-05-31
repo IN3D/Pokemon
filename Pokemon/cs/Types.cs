@@ -19,7 +19,7 @@ namespace Pokemon
      public class Types
     {
         protected string Name { get; set;}
-        protected double[] modifiers = new double[18];
+        public double[] modifiers = new double[18];
 
 
         public Types(string name, double[] mods)
@@ -39,6 +39,12 @@ namespace Pokemon
             {
                 this.modifiers[i] = copy.modifiers[i];
             }
+        }
+
+        // toString Ovrride
+        public override string ToString()
+        {
+            return this.Name;
         }
     }
 }
