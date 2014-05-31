@@ -18,19 +18,18 @@ namespace Pokemon
 {
     public class Pokemon
     {
-        protected
-        bool isGenderless { get; set; }
-        int CatchRate { get; set; }
-        int DexNumber { get; set; }
-        int Gender { get; set; }
-        int Level { get; set; }
-        int XP { get; set; }
-        int[] baseStats = new int[6];
-        int[] EVs = new int[6];
-        int[] IVs = new int[6];
-        int[] stats = new int[6];
-        public string Name { get; set; }
-        string[] types = new string[2]; // NOTE: This is temporary
+		protected bool isGenderless { get; set; }
+		protected int CatchRate { get; set; }
+		protected int DexNumber { get; set; }
+		protected int Gender { get; set; }
+		protected int Level { get; set; }
+		protected int XP { get; set; }
+		protected int[] baseStats = new int[6];
+		protected int[] EVs = new int[6];
+		protected int[] IVs = new int[6];
+		protected int[] stats = new int[6];
+		protected string Name { get; set; }
+		protected string[] types = new string[2]; // NOTE: This is temporary
         // TODO: create Abilities class
         // TODO: create Attacks class
         // TODO: create LevelGroup class

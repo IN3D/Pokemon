@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="cs\Pokemon.cs">
     <Files>
-      <File FileName="cs/Model.cs" Line="23" Column="1" />
+      <File FileName="cs\Model.cs" Line="1" Column="1" />
       <File FileName="Program.cs" Line="18" Column="4" />
+      <File FileName="cs\Pokemon.cs" Line="22" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
