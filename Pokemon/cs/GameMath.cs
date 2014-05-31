@@ -146,6 +146,17 @@ namespace Pokemon
 				}
 			}
 		}
+
+        public static void gameLoadPopulate()
+        {
+            // call all of the different math functions.
+            popErratic();
+            popFast();
+            popMediumFast();
+            popMediumSlow();
+            popSlow();
+            popFluctuating();
+        }
 	}
 }
 

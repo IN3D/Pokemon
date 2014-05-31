@@ -25,7 +25,7 @@ namespace Pokemon
     public static class Engine
     {
 
-        public static void ReadXML(string fileLocation, ref LinkedList<Pokemon> list)
+        public static void ReadPokemonXML(string fileLocation, ref LinkedList<Pokemon> list)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(fileLocation);
@@ -61,6 +61,36 @@ namespace Pokemon
 
                     // TODO: attacks not yet implemented
 					list.AddLast(new Pokemon(name, catchRate ,dexNum, genderless, baseStats, types));
+                }
+            }
+        }
+
+        public static void ReadTypeXML(string fileLocation)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fileLocation);
+            int i = 0;
+
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                if (node.NodeType != XmlNodeType.Comment)
+                {   
+                    string name = node.Attributes.GetNamedItem("name").Value;
+                    double[] mods = new double[18];
+
+                    int x = 0;
+                    foreach(XmlNode n in node)
+                    {
+                        if(n.NodeType != XmlNodeType.Comment)
+                        {
+                            mods[x] = double.Parse(n.InnerText);
+                            x++;
+                        }
+                    }
+
+                    Types tempType = new Types(name, mods);
+                    Model.Types[i] = new Types(tempType);
+                    i++;
                 }
             }
         }

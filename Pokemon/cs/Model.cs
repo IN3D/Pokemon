@@ -18,19 +18,16 @@ namespace Pokemon
 {
 	public static class Model
 	{
-		public static LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
+        public static Types[] Types = new Types[18];
+        public static LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
+        public static LinkedList<ItemBase> objects = new LinkedList<ItemBase>();
 
 		#region ExperienceGroups
 		public static int[] Erratic = new int[100];
-
 		public static int[] Fast = new int[100];
-
 		public static int[] MediumFast = new int[100];
-
 		public static int[] MediumSlow = new int[100];
-
 		public static int[] Slow = new int[100];
-
 		public static int[] Fluctuating = new int[100];
 		#endregion
 

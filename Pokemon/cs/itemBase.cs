@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    abstract class ItemBase
+    public abstract class ItemBase
     {
         protected string Name { get; set; }
         protected string TargetStat { get; set; } //Used for battle items/EV items
@@ -19,7 +19,8 @@ namespace Pokemon
         }
     }
 
-    class potion : ItemBase
+
+    public class potion : ItemBase
     {
         public potion(string name, int id)
         {
@@ -33,7 +34,8 @@ namespace Pokemon
         }
     }
 
-    class ppItem : ItemBase
+
+    public class ppItem : ItemBase
     {
         public ppItem(string name, string targetMove , int id)
         {
@@ -48,7 +50,8 @@ namespace Pokemon
         }
     }
 
-    class battleItem : ItemBase
+
+    public class battleItem : ItemBase
     {
         public battleItem(string name, string targetStat, int id)
         {
@@ -63,7 +66,8 @@ namespace Pokemon
         }
     }
 
-    class evItem : ItemBase
+
+    public class evItem : ItemBase
     {
       public evItem(string name, string targetStat, int id)
         {

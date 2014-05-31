@@ -10,76 +10,65 @@ namespace Pokemon
     {
         static void Main(string[] args)
         {
-            LinkedList<ItemBase> objects = new LinkedList<ItemBase>();
+            bool types;
+            bool pokemon;
 
-            potion potion01 = new potion("Potion", 20);
-            potion potion02 = new potion("Super Potion", 50);
-            potion potion03 = new potion("Hyper Potion", 100);
 
-            ppItem ppItem01 = new ppItem("Ether", "Flamethrower", 10); // flamethrower is a substitute for a selection in game
-
-            
-
-            battleItem battleItem01 = new battleItem("xAttack", "attack", 1);
-            battleItem battleItem02 = new battleItem("xDefense", "defense", 1);
-            battleItem battleItem03 = new battleItem("xSp. Attack", "sp. attack", 1);
-            battleItem battleItem04 = new battleItem("xSp. Defense", "sp. defense", 1);
-            battleItem battleItem05 = new battleItem("xSpeed", "speed", 1);
-            battleItem battleItem06 = new battleItem("xAccuracy", "accuracy", 1);
-            battleItem battleItem07 = new battleItem("Dire Hit", "critical hit ratio", 1);
-            
-
-            evItem evItem01 = new evItem("Protein", "attack", 10);
-            evItem evItem02 = new evItem("HP Up", "HP", 10);
-            evItem evItem03 = new evItem("Iron", "defense", 10);
-            evItem evItem04 = new evItem("Zinc", "special defense", 10);
-            evItem evItem05 = new evItem("Carbos", "speed", 10);
-            
-
-            objects.AddLast(potion01);
-            objects.AddLast(potion02);
-            objects.AddLast(potion03);
-            objects.AddLast(ppItem01);
-            objects.AddLast(battleItem01);
-            objects.AddLast(battleItem02);
-            objects.AddLast(battleItem03);
-            objects.AddLast(battleItem04);
-            objects.AddLast(battleItem05);
-            objects.AddLast(battleItem06);
-            objects.AddLast(battleItem07);
-            objects.AddLast(evItem01);
-            objects.AddLast(evItem02);
-            objects.AddLast(evItem03);
-            objects.AddLast(evItem04);
-            objects.AddLast(evItem05);
-
-            foreach (var item in objects)
+			try
             {
-                Console.WriteLine(item.use());
+                Engine.ReadTypeXML("..//..//xml//Types.xml");
+                IConsole.affirmitive("Types.xml");
+                types = true;
+            }
+            catch
+            {
+                IConsole.negative("Types.xml");
+                types = false;
+            }
+            try
+            {
+                Engine.ReadPokemonXML("..//..//xml//pokemon.xml", ref Model.pokemonMasterList);
+                IConsole.affirmitive("pokemon.xml");
+                pokemon = true;
+            }
+            catch
+            {
+                IConsole.negative("pokemon.xml");
+                pokemon = false;
             }
 
-            // the ReadLine should be outside of your for loop,
-            // otherwise the terminal will request input after every
-            // time it prints an item.
-			Engine.ReadXML("..//..//xml//pokemon.xml", ref Model.pokemonMasterList);
-			GameMath.popErratic ();
-			GameMath.popFast ();
-			GameMath.popMediumFast ();
-			GameMath.popMediumSlow ();
-			GameMath.popSlow ();
-			GameMath.popFluctuating ();
 
-			Program prog = new Program ();
 
-            Console.WriteLine("pokemon.xml file read in successfully\n=====================================");
+            /* this if statement is where the game actually occurs, to cut down on the compiler
+             * blowing up, I've wrapped a lot of code in try catches and ensure that the game has
+             * what it needs to start.
+             */
+            if (types && pokemon)
+            {
+                GameMath.gameLoadPopulate();
+                Program prog = new Program();
 
-			prog.DEBUG_ShowPokemonBaseInfo ();
 
-            // to keep the terminal open
-            Console.Write(">: ");
-            Console.ReadLine();
+                // to keep the terminal open
+                Console.Write(">: ");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error: a core file could not be loaded! \nThe game will now hault.");
+                Console.ResetColor();
+
+                Console.Write(">: ");
+                string input = Console.ReadLine();
+
+                Environment.Exit(0);
+            }
         }
 
+
+
+        // Program.cs Methods
 		public void DEBUG_ShowPokemonBaseInfo()
 		{
 			foreach (Pokemon pkm in Model.pokemonMasterList)

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cs\IConsole.cs" />
     <Compile Include="cs\ItemBase.cs" />
     <Compile Include="cs\Engine.cs" />
     <Compile Include="cs\Pokemon.cs" />
@@ -55,7 +56,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="xml\DamageModifications.xml" />
+    <Content Include="xml\Types.xml" />
     <Content Include="xml\pokemon.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

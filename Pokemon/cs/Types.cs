@@ -14,14 +14,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokemon.cs
+namespace Pokemon
 {
-     public class types
+     public class Types
     {
-        protected string name { get; set;}
+        protected string Name { get; set;}
         protected double[] modifiers = new double[18];
 
-     
-       
+
+        public Types(string name, double[] mods)
+        {
+            this.Name = name;
+            for (int i = 0; i < this.modifiers.Length; i++)
+            {
+                this.modifiers[i] = mods[i];
+            }
+        }
+
+        // copy constructor
+        public Types(Types copy)
+        {
+            this.Name = copy.Name;
+            for (int i = 0; i < this.modifiers.Length; i++)
+            {
+                this.modifiers[i] = copy.modifiers[i];
+            }
+        }
     }
 }
