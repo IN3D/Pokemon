@@ -114,5 +114,11 @@ namespace Pokemon
 
             Console.WriteLine();
         }
+
+        // toString Ovrride
+        public override string ToString()
+        {
+            return this.Name + " lvl. " + this.Level;
+        }
     }
 }
