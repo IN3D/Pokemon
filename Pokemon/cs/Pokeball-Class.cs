@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    abstract class Pokeball_Class
+    abstract class PokeballBase
     {
         protected string Name { get; set; }
         protected string Description {get; set; }
@@ -19,36 +19,37 @@ namespace Pokemon
         }
     }
 
-    class generic : Pokeball_Class
+    class GenericBall : PokeballBase
     {
-        public generic (string name, string flash, string description, double catchRate)
+        public GenericBall(string name, string flash, string description, double catchRate)
         {
             this.Name = name;
             this.PokeballFlash = flash;
             this.Description = description;
             this.CatchRate = catchRate;
 
-        }
-
-        public override string use()
-        {
-           return this.Name + this.Description +" Catch rate of: " + this.CatchRate + "x" + "\n" + this.PokeballFlash;
-        }
-    }
-
-    class great : Pokeball_Class
-    {
-        public great (string name, string flash, string description, double catchRate)
-        {
-            this.Name = name;
-            this.PokeballFlash = flash;
-            this.Description = description;
-            this.CatchRate = catchRate;
         }
 
         public override string use()
         {
             return this.Name + this.Description + " Catch rate of: " + this.CatchRate + "x" + "\n" + this.PokeballFlash;
+        }
+    }
+
+    class MasterBall : PokeballBase
+    {
+        public MasterBall(string name, string flash, string description, double catchRate)
+        {
+            this.Name = name;
+            this.PokeballFlash = flash;
+            this.Description = description;
+            this.CatchRate = catchRate;
+        }
+
+
+        public override string use()
+        {
+             return this.Name + this.Description + " Catch rate of: " + this.CatchRate + "x" + "\n" + this.PokeballFlash;
         }
     }
 }
