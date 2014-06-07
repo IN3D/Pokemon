@@ -43,12 +43,19 @@ namespace Pokemon
                     bool genderless = node.ChildNodes.Item(3).InnerText != "0";
 
                     // just do types as strings for now
-                    string[] types = new string[2];
+                    int[] types = new int[2];
                     int i = 0;
+                    int typesCount = node.ChildNodes.Item(4).ChildNodes.Count;
                     foreach (XmlNode n in node.ChildNodes.Item(4))
                     {
-                        types[i] = n.InnerText;
+                        types[i] = Convert.ToInt32(n.InnerText);
                         i++;
+                    }
+
+                    // Ensures that mono-type pokemon don't end up with a secondary normal type
+                    if (typesCount != 2)
+                    {
+                        types[1] = -1;
                     }
 
                     int[] baseStats = new int[6];

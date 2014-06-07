@@ -18,30 +18,32 @@ namespace Pokemon
 {
     public class Pokemon
     {
-		protected bool isGenderless { get; set; }
+		protected bool IsGenderless { get; set; }
 		protected int CatchRate { get; set; }
 		protected int DexNumber { get; set; }
 		protected int Gender { get; set; }
 		protected int Level { get; set; }
+        protected int TempType { get; set; }
 		protected int XP { get; set; }
 		protected int[] baseStats = new int[6];
 		protected int[] EVs = new int[6];
 		protected int[] IVs = new int[6];
 		protected int[] stats = new int[6];
 		protected string Name { get; set; }
-		protected string[] types = new string[2]; // NOTE: This is temporary
+		protected int[] types = new int[2];
         // TODO: create Abilities class
         // TODO: create Attacks class
         // TODO: create LevelGroup class
         // TODO: create Type class
 
         // Constructor: Base Data
-		public Pokemon(string name, int catchRate, int dexNum, bool genderless, int[] baseStats, string[] types)
+		public Pokemon(string name, int catchRate, int dexNum, bool genderless, int[] baseStats, int[] types)
         {
             this.Name = name;
 			this.CatchRate = catchRate;
             this.DexNumber = dexNum;
-            this.isGenderless = genderless;
+            this.IsGenderless = genderless;
+            this.TempType = -1;
 
             for(int i = 0; i < 6; i++)
             {
@@ -59,10 +61,18 @@ namespace Pokemon
         {
             Random rnd = new Random();
             
-            this.isGenderless = basePkm.isGenderless;
+            this.IsGenderless = basePkm.IsGenderless;
             this.CatchRate = basePkm.CatchRate;
             this.DexNumber = basePkm.DexNumber;
             this.Name = basePkm.Name;
+            this.TempType = basePkm.TempType;
+
+            for (int i = 0; i < basePkm.types.Length; i++)
+            {
+                this.types[i] = basePkm.types[i];
+
+            }
+
             for(int i = 0; i < 6; i++)
             {
                 this.baseStats[i] = basePkm.baseStats[i];
@@ -90,15 +100,15 @@ namespace Pokemon
             string idFormat = this.DexNumber.ToString("D3");
             Console.WriteLine("\tDexNumber: " + idFormat);
             Console.WriteLine("\tCatch Rate: " + this.CatchRate);
-            string noGender = this.isGenderless.ToString();
+            string noGender = this.IsGenderless.ToString();
             Console.WriteLine("\tGenderless: " + noGender);
 
             Console.WriteLine("\tTypes: ");
             for (int i = 0; i < this.types.Length; i++)
             {
-                if(this.types[i] != null)
+                if(this.types[i] != -1)
                 {
-                    Console.WriteLine("\t\tType " + (i + 1) + ": " + this.types[i]);
+                    Console.WriteLine("\t\tType " + (i + 1) + ": " + Model.Types[this.types[i]].ToString());
                 }
             }
 
