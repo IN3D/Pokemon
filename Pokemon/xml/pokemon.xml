@@ -28,8 +28,8 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Grass</type>
-      <type>Poison</type>
+      <type>11</type>
+      <type>3</type>
     </types>
     <stats>
       <stat name="HP">45</stat>
@@ -53,8 +53,8 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Grass</type>
-      <type>Poison</type>
+      <type>11</type>
+      <type>3</type>
     </types>
     <stats>
       <stat name="HP">60</stat>
@@ -80,8 +80,8 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Grass</type>
-      <type>Poison</type>
+      <type>11</type>
+      <type>3</type>
     </types>
     <stats>
       <stat name="HP">80</stat>
@@ -108,7 +108,7 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Fire</type>
+      <type>9</type>
     </types>
     <stats>
       <stat name="HP">39</stat>
@@ -131,7 +131,7 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Fire</type>
+      <type>9</type>
     </types>
     <stats>
       <stat name="HP">58</stat>
@@ -155,8 +155,8 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Fire</type>
-      <type>Flying</type>
+      <type>9</type>
+      <type>2</type>
     </types>
     <stats>
       <stat name="HP">78</stat>
@@ -187,7 +187,7 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Water</type>
+      <type>10</type>
     </types>
     <stats>
       <stat name="HP">44</stat>
@@ -211,7 +211,7 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Water</type>
+      <type>10</type>
     </types>
     <stats>
       <stat name="HP">59</stat>
@@ -237,7 +237,7 @@
     <levelGroup>MediumSlow</levelGroup>
     <isGenderless>0</isGenderless>
     <types>
-      <type>Water</type>
+      <type>10</type>
     </types>
     <stats>
       <stat name="HP">79</stat>
@@ -265,7 +265,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
+			<type>6</type>
 		</types>
 		<stats>
 			<stat name="HP">45</stat>
@@ -288,7 +288,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
+			<type>6</type>
 		</types>
 		<stats>
 			<stat name="HP">50</stat>
@@ -310,8 +310,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
-			<type>Flying</type>
+			<type>6</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">60</stat>
@@ -338,8 +338,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
-			<type>Poison</type>
+			<type>6</type>
+			<type>3</type>
 		</types>
 		<stats>
 			<stat name="HP">40</stat>
@@ -362,8 +362,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
-			<type>Poison</type>
+			<type>6</type>
+			<type>3</type>
 		</types>
 		<stats>
 			<stat name="HP">45</stat>
@@ -385,8 +385,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Bug</type>
-			<type>Poison</type>
+			<type>6</type>
+			<type>3</type>
 		</types>
 		<stats>
 			<stat name="HP">65</stat>
@@ -410,8 +410,8 @@
 		<levelGroup>MediumSlow</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
-			<type>Flying</type>
+			<type>0</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">40</stat>
@@ -435,8 +435,8 @@
 		<levelGroup>MediumSlow</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
-			<type>Flying</type>
+			<type>0</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">63</stat>
@@ -462,8 +462,8 @@
 		<levelGroup>MediumSlow</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
-			<type>Flying</type>
+			<type>0</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">83</stat>
@@ -491,7 +491,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
+			<type>0</type>
 		</types>
 		<stats>
 			<stat name="HP">30</stat>
@@ -516,7 +516,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
+			<type>0</type>
 		</types>
 		<stats>
 			<stat name="HP">55</stat>
@@ -542,8 +542,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
-			<type>Flying</type>
+			<type>0</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">40</stat>
@@ -568,8 +568,8 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Normal</type>
-			<type>Flying</type>
+			<type>0</type>
+			<type>2</type>
 		</types>
 		<stats>
 			<stat name="HP">65</stat>
@@ -598,7 +598,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Poison</type>
+			<type>3</type>
 		</types>
 		<stats>
 			<stat name="HP">35</stat>
@@ -624,7 +624,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Poison</type>
+			<type>3</type>
 		</types>
 		<stats>
 			<stat name="HP">60</stat>
@@ -654,7 +654,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Electric</type>
+			<type>12</type>
 		</types>
 		<stats>
 			<stat name="HP">35</stat>
@@ -679,7 +679,7 @@
 		<levelGroup>MediumFast</levelGroup>
 		<isGenderless>0</isGenderless>
 		<types>
-			<type>Electric</type>
+			<type>12</type>
 		</types>
 		<stats>
 			<stat name="HP">60</stat>
