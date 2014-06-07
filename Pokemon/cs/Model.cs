@@ -21,6 +21,7 @@ namespace Pokemon
         public static Types[] Types = new Types[18];
         public static LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
         public static LinkedList<ItemBase> objects = new LinkedList<ItemBase>();
+        // public static LinkedList<> world = new LinkedList<?>();
 
 		#region ExperienceGroups
 		public static int[] Erratic = new int[100];
