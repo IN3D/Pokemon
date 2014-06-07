@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- Class 0-->
+  
+  <ball name="Pokeball" class="0">
+    <description>A device for catching wild Pokémon. It's thrown like a ball at a Pokémon, comfortably encapsulating its target.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>1</catchRate>
+  </ball>
+
+  <ball name="Greatball" class="0">
+    <description>A good, high-performance Poké Ball that provides a higher Pokémon catch rate than a standard Poké Ball can.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>1.5</catchRate>
+  </ball>
+
+  <ball name="Ultraball" class="0">
+    <description>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great Ball.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>2</catchRate>
+  </ball>
+
+  <ball name="Safariball" class="0">
+    <description>A special Poké Ball that is used only in the Great Marsh. It is recognizable by the camouflage pattern decorating it.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>1.5</catchRate>
+  </ball>
+
+  <ball name="Premierball" class="0">
+    <description>A somewhat rare Poké Ball that was made as a commemorative item used to celebrate an event of some sort.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>1</catchRate>
+  </ball>
+
+  <ball name="Sportsball" class="0">
+    <description>A special Poké Ball that is used during the Bug-Catching Contest.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>1.5</catchRate>
+  </ball>
+  
+  <!-- Class 1-->
+
+  <ball name="Masterball" class="1">
+    <description>The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>255</catchRate>
+  </ball>
+
+  <ball name="Park ball" class="1">
+    <description>A special Poké Ball for the Pal Park.</description>
+    <flashStyle>Normal Flash</flashStyle>
+    <catchRate>255</catchRate>
+  </ball>
+</root>
