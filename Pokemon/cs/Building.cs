@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokemon.cs
+namespace Pokemon
 {
-    class Building
+    public class Building
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        protected Building[] rooms;
     }
 }

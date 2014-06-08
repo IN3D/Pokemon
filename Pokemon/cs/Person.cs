@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokemon.cs
+namespace Pokemon
 {
-    class Person
+    public class Person
     {
     }
 }
