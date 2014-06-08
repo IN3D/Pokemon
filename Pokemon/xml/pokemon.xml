@@ -16,31 +16,680 @@
 	
 <root>
 	<!--001: Bulbasaur-->
+  <pokemon name="Bulbasaur">
+    <dexNum>1</dexNum>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>11</type>
+      <type>3</type>
+    </types>
+    <stats>
+      <stat name="HP">45</stat>
+      <stat name="Attack">49</stat>
+      <stat name="Defense">49</stat>
+      <stat name="Sp.Attack">65</stat>
+      <stat name="Sp.Defense">65</stat>
+      <stat name="Speed">45</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Tackle</move>
+      <move level="3">Growl</move>
+      <move level="7">Leech Seed</move>
+      <move level="9">Vine Whip</move>
+    </learnSet>
+  </pokemon>
 	<!--002: Ivysaur-->
+  <pokemon name="Ivysaur">
+    <dexNumber>2</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>11</type>
+      <type>3</type>
+    </types>
+    <stats>
+      <stat name="HP">60</stat>
+      <stat name="Attack">62</stat>
+      <stat name="Defense">63</stat>
+      <stat name="Sp.Attack">80</stat>
+      <stat name="Sp.Defense">80</stat>
+      <stat name="Speed">60</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Tackle</move>
+      <move level="0">Growl</move>
+      <move level="0">Leech Seed</move>
+      <move level="3">Growl</move>
+      <move level="7">Leech Seed</move>
+      <move level="9">Vine Whip</move>
+    </learnSet>
+  </pokemon>
 	<!--003: Venusaur-->
+  <pokemon name="Venusaur">
+    <dexNumber>3</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>11</type>
+      <type>3</type>
+    </types>
+    <stats>
+      <stat name="HP">80</stat>
+      <stat name="Attack">82</stat>
+      <stat name="Defense">83</stat>
+      <stat name="Sp.Attack">100</stat>
+      <stat name="Sp.Defense">100</stat>
+      <stat name="Speed">80</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Tackle</move>
+      <move level="0">Growl</move>
+      <move level="0">Leech Seed</move>
+      <move level="0">Vine Whip</move>
+      <move level="3">Growl</move>
+      <move level="7">Leech Seed</move>
+      <move level="9">Vine Whip</move>
+    </learnSet>
+  </pokemon>
 	<!--004: Charmander-->
+  <pokemon name="Charmander">
+    <dexNumber>4</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>9</type>
+    </types>
+    <stats>
+      <stat name="HP">39</stat>
+      <stat name="Attack">52</stat>
+      <stat name="Defense">43</stat>
+      <stat name="Sp.Attack">60</stat>
+      <stat name="Sp.Defense">50</stat>
+      <stat name="Speed">65</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Scratch</move>
+      <move level="0">Growl</move>
+      <move level="7">Ember</move>
+    </learnSet>
+  </pokemon>
 	<!--005: Charmeleon-->
+  <pokemon name="Charmeleon">
+    <dexNumber>5</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>9</type>
+    </types>
+    <stats>
+      <stat name="HP">58</stat>
+      <stat name="Attack">64</stat>
+      <stat name="Defense">58</stat>
+      <stat name="Sp.Attack">80</stat>
+      <stat name="Sp.Defense">65</stat>
+      <stat name="Speed">80</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Scratch</move>
+      <move level="0">Growl</move>
+      <move level="0">Ember</move>
+      <move level="7">Ember</move>
+    </learnSet>
+  </pokemon>
 	<!--006: Charizard-->
+  <pokemon name="Charizard">
+    <dexNumber>6</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>9</type>
+      <type>2</type>
+    </types>
+    <stats>
+      <stat name="HP">78</stat>
+      <stat name="Attack">84</stat>
+      <stat name="Defense">78</stat>
+      <stat name="Sp.Attack">109</stat>
+      <stat name="Sp.Defense">85</stat>
+      <stat name="Speed">100</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Flare Blitz</move>
+      <move level="0">Heat Wave</move>
+      <move level="0">Dragon Claw</move>
+      <move level="0">Shadow Claw</move>
+      <move level="0">Air Slash</move>
+      <move level="0">Scratch</move>
+      <move level="0">Growl</move>
+      <move level="0">Ember</move>
+      <move level="0">Smokescreen</move>
+      <move level="7">Ember</move>
+      <move level="10">Smokescreen</move>
+    </learnSet>
+  </pokemon>
 	<!--007: Squirtle-->
+  <pokemon name="Squirtle">
+    <dexNumber>7</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>10</type>
+    </types>
+    <stats>
+      <stat name="HP">44</stat>
+      <stat name="Attack">48</stat>
+      <stat name="Defense">65</stat>
+      <stat name="Sp.Attack">50</stat>
+      <stat name="Sp.Defense">64</stat>
+      <stat name="Speed">43</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Tackle</move>
+      <move level="0">Tail Whip</move>
+      <move level="7">Water Gun</move>
+      <move level="10">Withdraw</move>
+    </learnSet>
+  </pokemon>
 	<!--008: Wartortle-->
+  <pokemon name="Wartortle">
+    <dexNumber>8</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>10</type>
+    </types>
+    <stats>
+      <stat name="HP">59</stat>
+      <stat name="Attack">63</stat>
+      <stat name="Defense">80</stat>
+      <stat name="Sp.Attack">65</stat>
+      <stat name="Sp.Defense">80</stat>
+      <stat name="Speed">58</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Tackle</move>
+      <move level="0">Tail Whip</move>
+      <move level="0">Bubble</move>
+      <move level="4">Tail Whip</move>
+      <move level="7">Bubble</move>
+      <move level="10">Withdraw</move>
+    </learnSet>
+  </pokemon>
 	<!--009: Blastoise-->
+  <pokemon name="Blastoise">
+    <dexNumber>9</dexNumber>
+    <catchRate>45</catchRate>
+    <levelGroup>MediumSlow</levelGroup>
+    <isGenderless>0</isGenderless>
+    <types>
+      <type>10</type>
+    </types>
+    <stats>
+      <stat name="HP">79</stat>
+      <stat name="Attack">83</stat>
+      <stat name="Defense">100</stat>
+      <stat name="Sp.Attack">85</stat>
+      <stat name="Sp.Defense">105</stat>
+      <stat name="Speed">78</stat>
+    </stats>
+    <learnSet>
+      <move level="0">Flash Cannon</move>
+      <move level="0">Tackle</move>
+      <move level="0">Tail Whip</move>
+      <move level="0">Bubble</move>
+      <move level="0">Withdraw</move>
+      <move level="4">Tail Whip</move>
+      <move level="7">Bubble</move>
+      <move level="10">Withdraw</move>
+    </learnSet>
+  </pokemon>
 	<!--010: Caterpie-->
+	<pokemon name="Caterpie">
+		<dexNumber>10</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+		</types>
+		<stats>
+			<stat name="HP">45</stat>
+			<stat name="Attack">30</stat>
+			<stat name="Defense">35</stat>
+			<stat name="Sp.Attack">20</stat>
+			<stat name="Sp.Defense">20</stat>
+			<stat name="Speed">45</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">String Shot</move>
+			<move level="15">Bug Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--011: Metapod-->
+	<pokemon name="Metapod">
+		<dexNumber>11</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+		</types>
+		<stats>
+			<stat name="HP">50</stat>
+			<stat name="Attack">20</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">25</stat>
+			<stat name="Speed">30</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Harden</move>
+			<move level="7">Harden</move>
+		</learnSet>
+	</pokemon>
 	<!--012: Butterfree-->
+	<pokemon name="Butterfree">
+		<dexNumber>12</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">45</stat>
+			<stat name="Defense">50</stat>
+			<stat name="Sp.Attack">90</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">70</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Confusion</move>
+			<move level="7">confusion</move>
+			<move level="12">Poison Powder</move>
+			<move level="12">Stun Spore</move>
+			<move level="12">Sleep Powder</move>
+			<move level="16">Gust</move>
+			<move level="18">Supersonic</move>
+		</learnSet>
+	</pokemon>
 	<!--013: Weedle-->
+	<pokemon name="Weedle">
+		<dexNumber>13</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+			<type>3</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">35</stat>
+			<stat name="Defense">30</stat>
+			<stat name="Sp.Attack">20</stat>
+			<stat name="Sp.Defense">20</stat>
+			<stat name="Speed">50</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Poison Sting</move>
+			<move level="0">String Shot</move>
+			<move level="15">Bug Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--014: Kakuna-->
+	<pokemon name="Kakuna">
+		<dexNumber>14</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+			<type>3</type>
+		</types>
+		<stats>
+			<stat name="HP">45</stat>
+			<stat name="Attack">25</stat>
+			<stat name="Defense">50</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">25</stat>
+			<stat name="Speed">35</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Harden</move>
+			<move level="7">Harden</move>
+		</learnSet>
+	</pokemon>
 	<!--015: Beedrill-->
+	<pokemon name="Beedrill">
+		<dexNumber>15</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>6</type>
+			<type>3</type>
+		</types>
+		<stats>
+			<stat name="HP">65</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">45</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">75</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Fury Attack</move>
+			<move level="10">Fury Attack</move>
+			<move level="13">Focus Energy</move>
+			<move level="16">Twineedle</move>
+		</learnSet>
+	</pokemon>
 	<!--016: Pidgey-->
+	<pokemon name="Pidgey">
+		<dexNumber>16</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumSlow</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">45</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">35</stat>
+			<stat name="Sp.Defense">35</stat>
+			<stat name="Speed">56</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--017: Pidgeotto-->
+	<pokemon name="Pidgeotto">
+		<dexNumber>17</dexNumber>
+		<catchRate>120</catchRate>
+		<levelGroup>MediumSlow</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">63</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">50</stat>
+			<stat name="Speed">71</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Sand Attack</move>
+			<move level="0">Gust</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--018: Pidgeot-->
+	<pokemon name="Pidgeot">
+		<dexNumber>18</dexNumber>
+		<catchRate>45</catchRate>
+		<levelGroup>MediumSlow</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">83</stat>
+			<stat name="Attack">80</stat>
+			<stat name="Defense">75</stat>
+			<stat name="Sp.Attack">70</stat>
+			<stat name="Sp.Defense">70</stat>
+			<stat name="Speed">101</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Hurricane</move>
+			<move level="0">Tackle</move>
+			<move level="0">Sand Attack</move>
+			<move level="0">Gust</move>
+			<move level="0">Quick Attack</move>
+			<move level="5">Sand Attack</move>
+			<move level="9">Gust</move>
+			<move level="13">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--019: Rattata-->
+	<pokemon name="Rattata">
+		<dexNumber>19</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+		</types>
+		<stats>
+			<stat name="HP">30</stat>
+			<stat name="Attack">56</stat>
+			<stat name="Defense">35</stat>
+			<stat name="Sp.Attack">25</stat>
+			<stat name="Sp.Defense">35</stat>
+			<stat name="Speed">72</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Tail Whip</move>
+			<move level="4">Quick Attack</move>
+			<move level="7">Focus Energy</move>
+			<move level="10">Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--020: Raticate-->
+	<pokemon name="Raticate">
+		<dexNumber>20</dexNumber>
+		<catchRate>127</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+		</types>
+		<stats>
+			<stat name="HP">55</stat>
+			<stat name="Attack">81</stat>
+			<stat name="Defense">60</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">70</stat>
+			<stat name="Speed">97</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Tackle</move>
+			<move level="0">Tail Whip</move>
+			<move level="0">Swords Dance</move>
+			<move level="4">Quick Attack</move>
+			<move level="7">Focus Energy</move>
+			<move level="10">Bite</move>
+		</learnSet>
+	</pokemon>
 	<!--021: Spearow-->
+	<pokemon name="Spearow">
+		<dexNumber>21</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">40</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">30</stat>
+			<stat name="Sp.Attack">31</stat>
+			<stat name="Sp.Defense">31</stat>
+			<stat name="Speed">70</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Peck</move>
+			<move level="0">Growl</move>
+			<move level="5">Leer</move>
+			<move level="9">Fury Attack</move>
+			<move level="13">Pursuit</move>
+		</learnSet>
+	</pokemon>
 	<!--022: Fearow-->
+	<pokemon name="Fearow">
+		<dexNumber>22</dexNumber>
+		<catchRate>90</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>0</type>
+			<type>2</type>
+		</types>
+		<stats>
+			<stat name="HP">65</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">65</stat>
+			<stat name="Sp.Attack">61</stat>
+			<stat name="Sp.Defense">61</stat>
+			<stat name="Speed">100</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Drill Run</move>
+			<move level="0">Pluck</move>
+			<move level="0">Peck</move>
+			<move level="0">Growl</move>
+			<move level="0">Leer</move>
+			<move level="0">Fury Attack</move>
+			<move level="5">Leer</move>
+			<move level="9">Fury Attack</move>
+			<move level="13">Pursuit</move>
+		</learnSet>
+	</pokemon>
 	<!--023: Ekans-->
+	<pokemon name="Ekans">
+		<dexNumber>23</dexNumber>
+		<catchRate>255</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>3</type>
+		</types>
+		<stats>
+			<stat name="HP">35</stat>
+			<stat name="Attack">60</stat>
+			<stat name="Defense">44</stat>
+			<stat name="Sp.Attack">40</stat>
+			<stat name="Sp.Defense">54</stat>
+			<stat name="Speed">55</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Warp</move>
+			<move level="0">Leer</move>
+			<move level="4">Poison Sting</move>
+			<move level="9">Bite</move>
+			<move level="12">Glare</move>
+			<move level="17">Screech</move>
+		</learnSet>
+	</pokemon>
 	<!--024: Arbok-->
+	<pokemon name="Arbok">
+		<dexNumber>24</dexNumber>
+		<catchRate>90</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>3</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">85</stat>
+			<stat name="Defense">69</stat>
+			<stat name="Sp.Attack">65</stat>
+			<stat name="Sp.Defense">79</stat>
+			<stat name="Speed">80</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Ice Fang</move>
+			<move level="0">Thunder Fang</move>
+			<move level="0">Fire Fang</move>
+			<move level="0">Wrap</move>
+			<move level="0">Leer</move>
+			<move level="0">Poison Sting</move>
+			<move level="0">Bite</move>
+			<move level="4">Poison Sting</move>
+			<move level="9">Bite</move>
+			<move level="12">Glare</move>
+		</learnSet>
+	</pokemon>
 	<!--025: Pikachu-->
+	<pokemon name="Pikachu">
+		<dexNumber>25</dexNumber>
+		<catchRate>190</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>12</type>
+		</types>
+		<stats>
+			<stat name="HP">35</stat>
+			<stat name="Attack">55</stat>
+			<stat name="Defense">40</stat>
+			<stat name="Sp.Attack">50</stat>
+			<stat name="Sp.Defense">50</stat>
+			<stat name="Speed">90</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Thunder Shock</move>
+			<move level="0">Tail Whip</move>
+			<move level="5">Growl</move>
+			<move level="7">Play Nice</move>
+			<move level="10">Quick Attack</move>
+		</learnSet>
+	</pokemon>
 	<!--026: Raichu-->
+	<pokemon name="Raichu">
+		<dexNumber>26</dexNumber>
+		<catchRate>75</catchRate>
+		<levelGroup>MediumFast</levelGroup>
+		<isGenderless>0</isGenderless>
+		<types>
+			<type>12</type>
+		</types>
+		<stats>
+			<stat name="HP">60</stat>
+			<stat name="Attack">90</stat>
+			<stat name="Defense">55</stat>
+			<stat name="Sp.Attack">90</stat>
+			<stat name="Sp.Defense">80</stat>
+			<stat name="Speed">110</stat>
+		</stats>
+		<learnSet>
+			<move level="0">Thunder Shock</move>
+			<move level="0">Tail Whip</move>
+			<move level="0">Quick Attack</move>
+			<move level="0">Thunderbolt</move>
+		</learnSet>
+	</pokemon>
 	<!--027: Sandshrew-->
 	<!--028: Sandslash-->
 	<!--029: Nidoran f-->

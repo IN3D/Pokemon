@@ -39,6 +39,8 @@ namespace Pokemon
 
 
 
+
+
             /* this if statement is where the game actually occurs, to cut down on the compiler
              * blowing up, I've wrapped a lot of code in try catches and ensure that the game has
              * what it needs to start.
@@ -47,6 +49,7 @@ namespace Pokemon
             {
                 GameMath.gameLoadPopulate();
                 Program prog = new Program();
+
 
 
                 // to keep the terminal open
@@ -65,6 +68,8 @@ namespace Pokemon
                 Environment.Exit(0);
             }
         }
+
+
 
 
 
