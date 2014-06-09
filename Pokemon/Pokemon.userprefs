@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="cs\Pokemon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="cs/Region.cs">
     <Files>
-      <File FileName="cs\Model.cs" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="18" Column="4" />
-      <File FileName="cs\Pokemon.cs" Line="22" Column="9" />
+      <File FileName="Program.cs" Line="23" Column="18" />
+      <File FileName="cs/Grass.cs" Line="1" Column="1" />
+      <File FileName="cs/LocationGlobals.cs" Line="7" Column="48" />
+      <File FileName="cs/Model.cs" Line="1" Column="1" />
+      <File FileName="cs/Region.cs" Line="12" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
