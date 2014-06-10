@@ -10,7 +10,28 @@ namespace Pokemon
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public Person[] peopleInBuilding;
+        public Building[] rooms;
 
-        protected Building[] rooms;
+        // default (assumes there are people in the building)
+        public Building(string name, string description, params Person[] people)
+        {
+            this.Name = name;
+            this.Description = description;
+
+            peopleInBuilding = new Person[people.Length];
+
+            for (int i = 0; i < this.peopleInBuilding.Length; i++)
+            {
+                this.peopleInBuilding[i] = people[i];
+            }
+        }
+
+        // empty building constructor
+        public Building(string name, string description)
+        {
+            this.Name = name;
+            this.Description = description;
+        }
     }
 }

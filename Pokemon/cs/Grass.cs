@@ -27,7 +27,7 @@ namespace Pokemon
         {
             Random random = new Random();
 
-            return random.Next((wildPokemon.Length + 1));
+            return random.Next((this.wildPokemon.Length + 1));
         }
     }
 }

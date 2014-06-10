@@ -5,11 +5,12 @@ namespace Pokemon
 {
 	public class Region
 	{
-		public LinkedList<Area> areas = new LinkedList<Area>();
+        public string Name { get; set; }
+        public LinkedList<Area> areas = new LinkedList<Area>();
 
-		public Region ()
+		public Region (string name)
 		{
-			// Constructor doesn't need to do anything
+            this.Name = name;
 		}
 	}
 }
