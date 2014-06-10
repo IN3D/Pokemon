@@ -12,9 +12,9 @@ namespace Pokemon
 
 
         // Default Constructor
-        public Grass(int count, params int[] pokeIndex)
+        public Grass(params int[] pokeIndex)
         {
-            wildPokemon = new int[count];
+            wildPokemon = new int[pokeIndex.Length];
 
             for (int i = 0; i <= pokeIndex.Length; i++)
             {
