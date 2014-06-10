@@ -57,7 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="cs\Model.cs" />
     <Compile Include="cs\GameMath.cs" />
-    <Compile Include="cs\LocationGlobals.cs" />
+    <Compile Include="cs\Location.cs" />
     <Compile Include="cs\Region.cs" />
   </ItemGroup>
   <ItemGroup>

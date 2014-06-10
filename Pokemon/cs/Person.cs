@@ -22,7 +22,7 @@ namespace Pokemon
 
             conversation = new string[convo.Length];
 
-            for (int i = 0; i < Description.Length; i++)
+            for (int i = 0; i < conversation.Length; i++)
             {
                 this.conversation[i] = convo[i];
             }

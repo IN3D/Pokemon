@@ -21,7 +21,7 @@ namespace Pokemon
 {
     public static class PopulateGameData
     {
-        public void load()
+        public static void load()
         {
             // Add regions
             Model.gameWorld.AddLast(new Region("Kanto"));
