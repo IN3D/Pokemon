@@ -41,7 +41,7 @@ namespace Pokemon
                     Console.WriteLine("goin -#");
                     Console.WriteLine("goes into a building, requires an operand");
                     Console.WriteLine();
-                    Console.WriteLine("goto -#"); // NOT IMPLEMENTED
+                    Console.WriteLine("goto -#"); // SORTA IMPLEMENTED
                     Console.WriteLine("moves the player to a neighboring area, requires an operand");
                     Console.WriteLine();
                     Console.WriteLine("help");
@@ -61,6 +61,9 @@ namespace Pokemon
                     Console.WriteLine();
                     Console.WriteLine("people"); // NOT IMPLEMENTED
                     Console.WriteLine("Lists all the people in the current area");
+                    Console.WriteLine();
+                    Console.WriteLine("quit");
+                    Console.WriteLine("Quits the game");
                     Console.WriteLine();
                     Console.WriteLine("talkto -#"); // NOT IMPLEMENTED
                     Console.WriteLine("Starts a conversation with the selected person, requires an operand");
@@ -90,7 +93,7 @@ namespace Pokemon
                     }
                     else
                     {
-                        Console.WriteLine("You're already in a building, leave it first");
+                        Console.WriteLine("You're already in a building, leave it first (rooms not yet implemented)");
                     }
 
                     break;
@@ -133,13 +136,31 @@ namespace Pokemon
                 
                 case "goto":
 
-                    if (Location.Building == -1 && Location.Room == -1)
+                    // TODO: put a lot more bug checking into this!!
+                    if (operand != -1 && operand <= (Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors.Length - 1))
                     {
-                        // TODO: Write code for going to the next area
+                        if (Location.Building == -1 && Location.Room == -1)
+                        {
+                            Console.WriteLine("You leave " + Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).Name +
+                                " and walk into " + Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors[operand]).Name);
+
+                            Location.Area = Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors[operand];
+                        }
+                        else
+                        {
+                            Console.WriteLine("You're in a building! Leave the building first");
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("You're in a building! Leave the building first");
+                        if (operand == -1)
+                        {
+                            Console.WriteLine("You entered an invalid number! (index invalid)");
+                        }
+                        else
+                        {
+                            Console.WriteLine("There is no such area neighboring the current area! (index out of bounds)");
+                        }
                     }
                     break;
 
@@ -160,6 +181,33 @@ namespace Pokemon
                         Console.WriteLine("You're not in a building!");
                     }
 
+                    break;
+
+                case "neighbors":
+
+                    if (Location.Building == -1 && Location.Room == -1)
+                    {
+                        if (Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors.Length != 0)
+                        {
+                            for (int i = 0; i < Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors.Length; i++)
+                            {
+                                Console.WriteLine(i + ": " + Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).neighbors[i]).Name);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("What have you done!? The area you are in has no neighbors!");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You're in a building, you need to leave first!");
+                    }
+                    break;
+
+                case "quit":
+
+                    Environment.Exit(0);
                     break;
 
                 case "whereami":
