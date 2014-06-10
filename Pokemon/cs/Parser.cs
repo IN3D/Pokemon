@@ -72,7 +72,7 @@ namespace Pokemon
                     Console.WriteLine("Tells the player where they are.");
                     break;
 
-                case "building":
+                case "buildings":
 
                     if (Location.Building == -1)
                     {
