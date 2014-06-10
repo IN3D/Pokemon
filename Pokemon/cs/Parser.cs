@@ -21,8 +21,9 @@ namespace Pokemon
         {
             int operand = 0;
             operand = input.IndexOf("-");
+            string switchStr = input.Substring(0, findSpace(input));
 
-            switch (input)
+            switch (switchStr)
             {
                 case "help":
                     Console.WriteLine("buildings");
@@ -90,6 +91,21 @@ namespace Pokemon
                     }
                     break;
             }
+        }
+
+        private int findSpace(string s)
+        {
+            int loc = 0;
+
+            char space = s[loc];
+
+            while (space != 32 && loc != s.Length)
+            {
+                loc++;
+                space = s[loc];
+            }
+
+            return loc;
         }
     }
 }
