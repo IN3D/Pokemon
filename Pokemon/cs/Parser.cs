@@ -55,10 +55,32 @@ namespace Pokemon
                     Console.WriteLine("talkto -#");
                     Console.WriteLine("Starts a conversation with the selected person, requires an operand");
                     break;
+
+                case "building":
+
+                    if (Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area)
+                        .buildingsInArea.Length != 0)
+                    {
+                        for (int i = 0; i < Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area)
+                            .buildingsInArea.Length; i++)
+                        {
+                            Console.WriteLine(i.ToString() + ": " + Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area)
+                                .buildingsInArea[i].Name);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are no buildings in this area");
+                    }
+                    break;
+
+                case "goin":
+
+                    break;
                 
                 case "goto":
 
-                    if (LocationGlobals.CurrentBuilding == -1)
+                    if (Location.Building == -1)
                     {
                         // TODO: Write code for going to the next area
                     }

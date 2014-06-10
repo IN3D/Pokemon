@@ -2,12 +2,12 @@
 
 namespace Pokemon
 {
-	public static class LocationGlobals
+	public static class Location
 	{
-		public static int CurrentRegion { get; set; }
-		public static int CurrentArea { get; set; }
-		public static int CurrentBuilding {get; set; }
-		public static int CurrentRoom { get; set; }
+		public static int Region { get; set; }
+		public static int Area { get; set; }
+		public static int Building {get; set; }
+		public static int Room { get; set; }
 	}
 }
 
