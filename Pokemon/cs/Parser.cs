@@ -65,6 +65,9 @@ namespace Pokemon
                     Console.WriteLine("quit");
                     Console.WriteLine("Quits the game");
                     Console.WriteLine();
+                    Console.WriteLine("search");
+                    Console.WriteLine("searchs the local grass for Pokemon");
+                    Console.WriteLine();
                     Console.WriteLine("talkto -#"); // NOT IMPLEMENTED
                     Console.WriteLine("Starts a conversation with the selected person, requires an operand");
                     Console.WriteLine();
@@ -208,6 +211,11 @@ namespace Pokemon
                 case "quit":
 
                     Environment.Exit(0);
+                    break;
+
+                case "search":
+
+                    Model.gameWorld.ElementAt(Location.Region).areas.ElementAt(Location.Area).getEncounter();
                     break;
 
                 case "whereami":

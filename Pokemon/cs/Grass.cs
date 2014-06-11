@@ -23,11 +23,12 @@ namespace Pokemon
         }
 
 
-        public int getEncounter()
-        {
+	    public int getPokemon()
+        {   
             Random random = new Random();
 
-            return random.Next((this.wildPokemon.Length + 1));
+            int rnd = random.Next((this.wildPokemon.Length));
+
+            return this.wildPokemon[rnd];
         }
-    }
 }
