@@ -254,15 +254,22 @@ namespace Pokemon
         {
             int loc = 0;
 
-            char space = s[loc];
-
-            while (space != 32 && loc < s.Length)
+            if (s.Length == 0)
             {
-                space = s[loc];
-                loc++;
+                return 0;
             }
+            else
+            {
+                char space = s[loc];
 
-            return loc;
+                while (space != 32 && loc < s.Length)
+                {
+                    space = s[loc];
+                    loc++;
+                }
+
+                return loc;
+            }
         }
 
         private static int convertOperand(string s)

@@ -18,19 +18,19 @@ namespace Pokemon
 {
     public class Pokemon
     {
-		protected bool IsGenderless { get; set; }
-		protected int CatchRate { get; set; }
-		protected int DexNumber { get; set; }
-		protected int Gender { get; set; }
-		protected int Level { get; set; }
-        protected int TempType { get; set; }
-		protected int XP { get; set; }
-		protected int[] baseStats = new int[6];
-		protected int[] EVs = new int[6];
-		protected int[] IVs = new int[6];
-		protected int[] stats = new int[6];
-		protected string Name { get; set; }
-		protected int[] types = new int[2];
+		public bool IsGenderless { get; set; }
+		public int CatchRate { get; set; }
+		public int DexNumber { get; set; }
+		public int Gender { get; set; }
+		public int Level { get; set; }
+        public int TempType { get; set; }
+		public int XP { get; set; }
+		public int[] baseStats = new int[6];
+		public int[] EVs = new int[6];
+		public int[] IVs = new int[6];
+		public int[] stats = new int[6];
+		public string Name { get; set; }
+		public int[] types = new int[2];
         // TODO: create Abilities class
         // TODO: create Attacks class
         // TODO: create LevelGroup class
@@ -88,7 +88,7 @@ namespace Pokemon
             }
 
             // TODO: When XP is properly implemented, this should be changed.
-            this.Level = rnd.Next(areaLow, areaHigh);
+            this.Level = rnd.Next(areaLow, areaHigh) + 1;
 
             this.Gender = rnd.Next(1, 2);
         }

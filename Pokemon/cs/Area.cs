@@ -8,11 +8,15 @@ namespace Pokemon
 {
     public class Area
     {
+        public bool HasGrass { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int AreaLow { get; set; }
+        public int AreaHigh { get; set; }
         public int[] neighbors;
         public Person[] peopleInArea;
         public Building[] buildingsInArea;
+        public Grass grass;
 
         // default constructor
         public Area(string name, string description, int neighborCount, int people, int building)
@@ -22,6 +26,24 @@ namespace Pokemon
             neighbors = new int[neighborCount];
             peopleInArea = new Person[people];
             buildingsInArea = new Building[building];
+
+            // because this is for a standard area...
+            HasGrass = false;
+        }
+
+        // route constructor
+        public Area(string name, string description, int neighborCount, int people, int building, int low, int high, params int[] wildPokes)
+        {
+            this.Name = name;
+            this.Description = description;
+            this.AreaLow = low;
+            this.AreaHigh = high;
+            neighbors = new int[neighborCount];
+            peopleInArea = new Person[people];
+            buildingsInArea = new Building[building];
+
+            HasGrass = true;
+            grass = new Grass(wildPokes);
         }
 
         // Methods
@@ -65,6 +87,7 @@ namespace Pokemon
             {
                 Console.WriteLine("There is no grass in this area");
             }
-        
+        }
+
     }
 }

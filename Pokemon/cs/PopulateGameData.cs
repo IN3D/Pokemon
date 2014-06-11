@@ -52,7 +52,7 @@ namespace Pokemon
 
             // ROUTE 1
             Model.gameWorld.ElementAt(0).areas.AddLast(new Area("Route 1",
-                "A country road full of greenery and rough paths", 2, 0, 0, 2, 5, 15, 18));
+                "A country road full of greenery and rough paths", 2, 0, 0, 1, 4, 15, 18));
             Model.gameWorld.ElementAt(0).areas.ElementAt(1).neighbors[0] = 0;
             Model.gameWorld.ElementAt(0).areas.ElementAt(1).neighbors[1] = 2;
 

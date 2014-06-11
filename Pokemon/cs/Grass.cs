@@ -16,19 +16,20 @@ namespace Pokemon
         {
             wildPokemon = new int[pokeIndex.Length];
 
-            for (int i = 0; i <= pokeIndex.Length; i++)
+            for (int i = 0; i < pokeIndex.Length; i++)
             {
                 wildPokemon[i] = pokeIndex[i];
             }
         }
 
 
-	    public int getPokemon()
-        {   
+        public int getPokemon()
+        {
             Random random = new Random();
 
             int rnd = random.Next((this.wildPokemon.Length));
 
             return this.wildPokemon[rnd];
         }
+    }
 }
