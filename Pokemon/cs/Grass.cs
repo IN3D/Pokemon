@@ -11,6 +11,7 @@ namespace Pokemon
         protected int[] wildPokemon;
 
 
+        #region constructors
         // Default Constructor
         public Grass(params int[] pokeIndex)
         {
@@ -21,8 +22,10 @@ namespace Pokemon
                 wildPokemon[i] = pokeIndex[i];
             }
         }
+        #endregion
 
 
+        #region methods
         public int getPokemon()
         {
             Random random = new Random();
@@ -31,5 +34,6 @@ namespace Pokemon
 
             return this.wildPokemon[rnd];
         }
+        #endregion
     }
 }

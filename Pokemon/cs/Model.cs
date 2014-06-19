@@ -19,6 +19,7 @@ namespace Pokemon
 	public static class Model
 	{
         public static Types[] Types = new Types[18];
+
         public static LinkedList<Pokemon> pokemonMasterList = new LinkedList<Pokemon>();
         public static LinkedList<ItemBase> objects = new LinkedList<ItemBase>();
 		public static LinkedList<Region> gameWorld = new LinkedList<Region>();

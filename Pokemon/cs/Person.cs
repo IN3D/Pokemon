@@ -8,17 +8,20 @@ namespace Pokemon
 {
     public class Person
     {
+        public string Description { get; set; }        
         public string Name { get; set; }
-        public string Description { get; set; }
-        public string[] conversation;
+
         public int[] items;
+        public string[] conversation;
         public Pokemon[] pokemon;
 
+
+        #region constructors
         // default constructor
         public Person(string name, string description, params string[] convo)
         {
-            this.Name = name;
             this.Description = description;
+            this.Name = name;
 
             conversation = new string[convo.Length];
 
@@ -27,5 +30,6 @@ namespace Pokemon
                 this.conversation[i] = convo[i];
             }
         }
+        #endregion
     }
 }

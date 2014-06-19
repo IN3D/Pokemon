@@ -45,12 +45,12 @@
     <Compile Include="cs\Area.cs" />
     <Compile Include="cs\Building.cs" />
     <Compile Include="cs\Grass.cs" />
-    <Compile Include="cs\Pokeball-Class.cs" />
     <Compile Include="cs\IConsole.cs" />
     <Compile Include="cs\ItemBase.cs" />
     <Compile Include="cs\Engine.cs" />
     <Compile Include="cs\Parser.cs" />
     <Compile Include="cs\Person.cs" />
+    <Compile Include="cs\PokeballClass.cs" />
     <Compile Include="cs\Pokemon.cs" />
     <Compile Include="cs\PopulateGameData.cs" />
     <Compile Include="cs\Types.cs" />
