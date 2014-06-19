@@ -8,48 +8,58 @@ namespace Pokemon
 {
     public class Area
     {
-        public bool HasGrass { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int AreaLow { get; set; }
+		public bool HasGrass { get; set; }
+		public int AreaLow { get; set; }
         public int AreaHigh { get; set; }
-        public int[] neighbors;
-        public Person[] peopleInArea;
+        public string Description { get; set; }
+        public string Name { get; set; }
+
+		public int[] neighbors;
         public Building[] buildingsInArea;
+        public Person[] peopleInArea;
+
         public Grass grass;
 
+
+		#region constructors
         // default constructor
         public Area(string name, string description, int neighborCount, int people, int building)
         {
-            this.Name = name;
-            this.Description = description;
-            neighbors = new int[neighborCount];
-            peopleInArea = new Person[people];
+            this.Description = description;            
+			this.Name = name;
+			
             buildingsInArea = new Building[building];
+            peopleInArea = new Person[people];			
+            neighbors = new int[neighborCount];
 
             // because this is for a standard area...
             HasGrass = false;
         }
 
+
         // route constructor
         public Area(string name, string description, int neighborCount, int people, int building, int low, int high, params int[] wildPokes)
         {
-            this.Name = name;
-            this.Description = description;
-            this.AreaLow = low;
             this.AreaHigh = high;
+            this.AreaLow = low;
+			this.Description = description;
+			this.Name = name;
+			
+            buildingsInArea = new Building[building];
             neighbors = new int[neighborCount];
             peopleInArea = new Person[people];
-            buildingsInArea = new Building[building];
 
             HasGrass = true;
+			
             grass = new Grass(wildPokes);
         }
+		#endregion
 
+
+		#region methods
         // Methods
         public void getEncounter()
         {
-            // a "just in case" error check, to ensure that this isn't called on area with no grass
             if (HasGrass == true)
             {
                 int index = this.grass.getPokemon();
@@ -57,6 +67,7 @@ namespace Pokemon
                 string gender = "";
 
                 // TODO: Eventually replace this, it's not optimal
+				// eventually a pokemon should contain this in int's own constructor
                 if (tempPoke.Gender == 1)
                 {
                     gender = "♂";
@@ -77,10 +88,12 @@ namespace Pokemon
                 }
 
                 System.Threading.Thread.Sleep(1500);
+                // NOTE: This is temporary replace once battles are implemented
                 Console.WriteLine("\nSince you can't catch, and you don't have a Pokemon, you run away...");
                 Console.Write("[Press Enter]");
                 Console.ReadLine();
                 Console.Clear();
+                // END NOTE
 
             }
             else
@@ -88,6 +101,6 @@ namespace Pokemon
                 Console.WriteLine("There is no grass in this area");
             }
         }
-
+		#endregion
     }
 }

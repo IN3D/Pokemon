@@ -25,17 +25,20 @@ namespace Pokemon
 		public int Level { get; set; }
         public int TempType { get; set; }
 		public int XP { get; set; }
+
 		public int[] baseStats = new int[6];
 		public int[] EVs = new int[6];
 		public int[] IVs = new int[6];
 		public int[] stats = new int[6];
+        public int[] types = new int[2];
 		public string Name { get; set; }
-		public int[] types = new int[2];
         // TODO: create Abilities class
         // TODO: create Attacks class
         // TODO: create LevelGroup class
         // TODO: create Type class
 
+
+        #region constructor
         // Constructor: Base Data
 		public Pokemon(string name, int catchRate, int dexNum, bool genderless, int[] baseStats, int[] types)
         {
@@ -55,6 +58,7 @@ namespace Pokemon
                 this.types[i] = types[i];
             }
         }
+
 
         // Constructor: Wild Pokemon
         public Pokemon(Pokemon basePkm, int areaLow, int areaHigh)
@@ -92,8 +96,10 @@ namespace Pokemon
 
             this.Gender = rnd.Next(1, 2);
         }
+        #endregion
 
 
+        #region methods
         public void debugBaseInfo()
         {
             Console.WriteLine("Name: " + this.Name);
@@ -124,11 +130,15 @@ namespace Pokemon
 
             Console.WriteLine();
         }
+        #endregion
 
+
+        #region overrides
         // toString Ovrride
         public override string ToString()
         {
             return this.Name + " lvl. " + this.Level;
         }
+        #endregion
     }
 }

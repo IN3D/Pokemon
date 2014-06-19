@@ -3,8 +3,23 @@
 namespace Pokemon
 {
 	public static class GameMath
-	{
-		public static void popErratic()
+    {
+        #region methods
+        public static void gameLoadPopulate()
+        {
+            // call all of the different math functions.
+            popErratic();
+            popFast();
+            popMediumFast();
+            popMediumSlow();
+            popSlow();
+            popFluctuating();
+        }
+        #endregion
+
+
+        #region privateMethods
+        private static void popErratic()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -38,7 +53,8 @@ namespace Pokemon
 			}
 		}
 
-		public static void popFast()
+
+		private static void popFast()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -49,7 +65,8 @@ namespace Pokemon
 			}
 		}
 
-		public static void popMediumFast()
+
+		private static void popMediumFast()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -66,7 +83,8 @@ namespace Pokemon
 			}
 		}
 
-		public static void popMediumSlow()
+
+		private static void popMediumSlow()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -87,7 +105,8 @@ namespace Pokemon
 			}
 		}
 
-		public static void popSlow()
+
+		private static void popSlow()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -105,7 +124,8 @@ namespace Pokemon
 			}
 		}
 
-		public static void popFluctuating()
+
+		private static void popFluctuating()
 		{
 			for (int i = 1; i <= 100; i++)
 			{
@@ -145,18 +165,9 @@ namespace Pokemon
 					Model.Fluctuating [i - 1] = exp;
 				}
 			}
-		}
-
-        public static void gameLoadPopulate()
-        {
-            // call all of the different math functions.
-            popErratic();
-            popFast();
-            popMediumFast();
-            popMediumSlow();
-            popSlow();
-            popFluctuating();
         }
-	}
+        #endregion
+
+    }
 }
 

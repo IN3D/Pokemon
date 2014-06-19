@@ -18,8 +18,41 @@ namespace Pokemon
 {
     public static class IConsole
     {
+        #region colorMessages
+        public static void WriteLnBlue(string s)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(s);
+            Console.ResetColor();
+        }
 
-        // use for successful loads
+
+        public static void WriteLnGreen(string s)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(s);
+            Console.ResetColor();
+        }
+
+
+        public static void WriteLnRed(string s)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(s);
+            Console.ResetColor();
+        }
+
+
+        public static void WriteLnYellow(string s)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(s);
+            Console.ResetColor();
+        }
+        #endregion
+
+
+        #region loadMessages
         public static void affirmitive(string filename)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -27,11 +60,13 @@ namespace Pokemon
             Console.ResetColor();
         }
 
+
         public static void negative(string filename)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Error in parsing \"" + filename + "\"");
             Console.ResetColor();
         }
+        #endregion
     }
 }

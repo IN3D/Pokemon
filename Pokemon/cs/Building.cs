@@ -8,11 +8,14 @@ namespace Pokemon
 {
     public class Building
     {
-        public string Name { get; set; }
         public string Description { get; set; }
-        public Person[] peopleInBuilding;
-        public Building[] rooms;
+		public string Name { get; set; }
 
+        public Building[] rooms;
+        public Person[] peopleInBuilding;
+
+
+		#region constructors
         // default (assumes there are people in the building)
         public Building(string name, string description, params Person[] people)
         {
@@ -33,5 +36,6 @@ namespace Pokemon
             this.Name = name;
             this.Description = description;
         }
+		#endregion
     }
 }

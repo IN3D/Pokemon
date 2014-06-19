@@ -25,6 +25,7 @@ namespace Pokemon
     public static class Engine
     {
 
+		#region xmlReaders
         public static void ReadPokemonXML(string fileLocation, ref LinkedList<Pokemon> list)
         {
             XmlDocument doc = new XmlDocument();
@@ -36,16 +37,17 @@ namespace Pokemon
 
                 if (node.NodeType != XmlNodeType.Comment)
                 {
-                    string name = node.Attributes.GetNamedItem("name").Value;
-                    int dexNum = int.Parse(node.ChildNodes.Item(0).InnerText);
-                    int catchRate = int.Parse(node.ChildNodes.Item(1).InnerText);
+					int catchRate = int.Parse(node.ChildNodes.Item(1).InnerText);                    
+					int dexNum = int.Parse(node.ChildNodes.Item(0).InnerText);
+					string name = node.Attributes.GetNamedItem("name").Value;
+
                     // Levelgroup not yet used
                     bool genderless = node.ChildNodes.Item(3).InnerText != "0";
 
-                    // just do types as strings for now
                     int[] types = new int[2];
                     int i = 0;
                     int typesCount = node.ChildNodes.Item(4).ChildNodes.Count;
+					
                     foreach (XmlNode n in node.ChildNodes.Item(4))
                     {
                         types[i] = Convert.ToInt32(n.InnerText);
@@ -60,6 +62,7 @@ namespace Pokemon
 
                     int[] baseStats = new int[6];
                     int x = 0;
+					
                     foreach (XmlNode n in node.ChildNodes.Item(5))
                     {
                         baseStats[x] = int.Parse(n.InnerText);
@@ -71,6 +74,7 @@ namespace Pokemon
                 }
             }
         }
+
 
         public static void ReadTypeXML(string fileLocation)
         {
@@ -101,5 +105,6 @@ namespace Pokemon
                 }
             }
         }
+		#endregion
     }
 }

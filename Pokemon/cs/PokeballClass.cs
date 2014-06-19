@@ -8,11 +8,12 @@ namespace Pokemon
 {
     abstract class PokeballBase
     {
-        protected string Name { get; set; }
-        protected string Description {get; set; }
-        protected string PokeballFlash { get; set; }
-        protected double CatchRate { get; set; }
-        // TO DO: formulate variables for the other types of balls (ex: Quick, Timer, Heavy, Friend, Love, etc.) that will have to take in data from game data for the character
+        public double CatchRate { get; set; }
+        public string Description {get; set; }
+        public string Name { get; set; }
+        public string PokeballFlash { get; set; }
+
+        // TODO: formulate variables for the other types of balls (ex: Quick, Timer, Heavy, Friend, Love, etc.) that will have to take in data from game data for the character
 
         public virtual string use()
         {
