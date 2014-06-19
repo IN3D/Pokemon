@@ -19,8 +19,8 @@ namespace Pokemon
         // default (assumes there are people in the building)
         public Building(string name, string description, params Person[] people)
         {
+            this.Description = description;            
             this.Name = name;
-            this.Description = description;
 
             peopleInBuilding = new Person[people.Length];
 
@@ -33,8 +33,9 @@ namespace Pokemon
         // empty building constructor
         public Building(string name, string description)
         {
-            this.Name = name;
             this.Description = description;
+            this.Name = name;
+
         }
 		#endregion
     }
