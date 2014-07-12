@@ -36,7 +36,14 @@ namespace Pokemon
 
 					Model.Erratic [i - 1] = exp;
 				}
-				else if (i >= 51 && i < 68)
+                else if (i > 50 && i < 68)
+                {
+                    int value = Convert.ToInt32(Math.Pow(i, 3));
+                    int exp = (((value) * ((150 - i))) / 100);
+
+                    Model.Erratic[i - 1] = exp;
+                }
+				else if (i >= 68 && i < 98)
 				{
 					int value = Convert.ToInt32 (Math.Pow (i, 3));
 					int exp = (value * ((1911 - (10 * i)) / 3)) / 500;

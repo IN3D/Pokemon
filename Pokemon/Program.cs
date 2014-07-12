@@ -52,9 +52,6 @@ namespace Pokemon
 
 
 
-                // to keep the terminal open
-                //Console.Write(">: ");
-                //Console.ReadLine();
 
                 Console.WriteLine("Welcome to Pokemon: Infinite!");
                 PopulateGameData.load();
@@ -64,7 +61,7 @@ namespace Pokemon
                 string input = "default";
 
                 while (input != "quit" || input != "exit")
-                {
+                {                
                     Console.Write(">: ");
                     input = Console.ReadLine();
 
