@@ -5,6 +5,9 @@
  * on: 5/23/2014
  * by: Eric Hopkins
  * 
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
  * This file contains all the data for the game engine class. As of
  * it's creation, this will only really involve reading in the games

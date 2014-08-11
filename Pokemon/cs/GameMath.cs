@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * == Created ==
+ * on: -unknown-
+ * by: Eric Hopkins
+ 
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
+ */
+using System;
 
 namespace Pokemon
 {

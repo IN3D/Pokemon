@@ -4,8 +4,12 @@
  * == Created ==
  * on: 5/27/2014
  * by: Eric Hopkins
+ *
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
- * This file contains all fo the games core data. this includes the lists of
+ * This file contains all of the games core data. this includes the lists of
  * pokemon, items, types, moves, etc. Model is public static and accessable from
  * everywhere in the program.
  * 

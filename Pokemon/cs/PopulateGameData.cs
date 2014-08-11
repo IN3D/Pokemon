@@ -4,8 +4,12 @@
  * == Created ==
  * on: 6/9/2014
  * by: Eric Hopkins
+ *
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
- * Please note taht this file is a temporary place holder. And is just a quick
+ * Please note that this file is a temporary place holder. And is just a quick
  * way to enter data into the game to test that the functaionality of playing
  * the game atually works. It should either be removed or at least cleaned up
  * at a later date.

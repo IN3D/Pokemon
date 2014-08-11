@@ -4,6 +4,10 @@
  * == Created ==
  * on: 5/23/2014
  * by: Eric Hopkins
+ *
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
  * This is the class file that is used in all instances of a pokemon.
  * 

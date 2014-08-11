@@ -4,14 +4,15 @@
  * == Created ==
  * on: 6/9/2014
  * by: Eric Hopkins
+ *
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
  * Parser contains all the methods necessary to parse user input.
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokemon
 {

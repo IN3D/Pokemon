@@ -1,8 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/* Pokemon: Infinte: A recreation of classic Pokemon games in C#
+ * 
+ * 
+ * == Created ==
+ * on: - unknown -
+ * by: Eric Hopkins
+ * 
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
+ */
+using System;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokemon
 {

@@ -4,15 +4,16 @@
  * on: 5/31/2014
  * by: Eric Hopkins
  * for: Pokemon: Infinite
+ *
+ * Modified
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
  * IConsole was created to help improve the appearance of the console through color and
  * formatting, as well as cut down on potential errors.
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokemon
 {

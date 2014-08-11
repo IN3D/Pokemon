@@ -4,15 +4,16 @@
  * == Created ==
  * on: 5/28/2014
  * by: Bradley Mackey
+ *
+ * == Modified ==
+ * on: 8/10/2014
+ * by: Eric Hopkins
  * 
  * This is the multipliers for damage output based on type versus type.
  * 
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokemon
 {
