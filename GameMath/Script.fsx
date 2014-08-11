@@ -1,5 +1,11 @@
-﻿// Learn more about F# at http://fsharp.net. See the 'F# Tutorial' project
-// for more guidance on F# programming.
+﻿// == (originally) Created ==
+// on: 7/11/2014
+// by: Eric Hopkins
+//
+// == Imported ==
+// on: 8/10/2014
+// by: Eric Hopkins
+//
 
 #load "GameMathLibrary.fs"
 open GameMathLibrary
