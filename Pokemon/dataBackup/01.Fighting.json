@@ -1,0 +1,24 @@
+{
+	"name" : "Fighting",
+	"index" : 1,
+	"modifiers" : {
+		"Normal" : 2,
+		"Fighting" : 1,
+		"Flying" : 0.5,
+		"Poison" : 0.5,
+		"Ground" : 1,
+		"Rock" : 2,
+		"Bug" : 0.5,
+		"Ghost" : 0,
+		"Steel" : 2,
+		"Fire" : 1,
+		"Water" : 1,
+		"Grass" : 1,
+		"Electric" : 1,
+		"Psychic" : 0.5,
+		"Ice" : 2,
+		"Dragon" : 1,
+		"Dark" : 2,
+		"Fairy" : 0.5
+	}
+}

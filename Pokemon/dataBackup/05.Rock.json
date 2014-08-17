@@ -1,0 +1,24 @@
+{
+	"name" : "Rock",
+	"index" : 5,
+	"modifiers" : {
+		"Normal" : 1,
+		"Fighting" : 0.5,
+		"Flying" : 2,
+		"Poison" : 1,
+		"Ground" : 0.5,
+		"Rock" : 1,
+		"Bug" : 2,
+		"Ghost" : 1,
+		"Steel" : 0.5,
+		"Fire" : 2,
+		"Water" : 1,
+		"Grass" : 1,
+		"Electric": 1,
+		"Psychic" : 1,
+		"Ice" : 2,
+		"Dragon" : 1,
+		"Dark" : 1,
+		"Fairy" : 1
+	}
+}

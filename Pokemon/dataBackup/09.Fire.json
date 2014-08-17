@@ -1,0 +1,24 @@
+{
+	"name" : "Fire",
+	"index" : 9,
+	"modifiers" : {
+		"Normal" : 1,
+		"Fighting" : 1,
+		"Flying" : 1,
+		"Poison" : 1,
+		"Ground" : 1,
+		"Rock" : 0.5,
+		"Bug" : 2,
+		"Ghost" : 1,
+		"Steel" : 2,
+		"Fire" : 0.5,
+		"Water" : 0.5,
+		"Grass" : 2,
+		"Electric" : 1,
+		"Psychic" : 1,
+		"Ice" : 2,
+		"Dragon" : 0.5,
+		"Dark" : 1,
+		"Fairy" : 1
+	}
+}
