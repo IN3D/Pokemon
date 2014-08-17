@@ -1,0 +1,24 @@
+{
+	"name" : "Electric",
+	"index" : 12,
+	"modifiers" : {
+		"Normal" : 1,
+		"Fighting" : 1,
+		"Flying" : 2,
+		"Poison" : 1,
+		"Ground" : 0,
+		"Rock" : 1,
+		"Bug" : 1,
+		"Ghost" : 1,
+		"Steel" : 1,
+		"Fire" : 1,
+		"Water" : 2,
+		"Grass" : 0.5,
+		"Electric" : 0.5,
+		"Psychic" : 1,
+		"Ice" : 1,
+		"Dragon" : 0.5,
+		"Dark" : 1,
+		"Fairy" : 1
+	}
+}

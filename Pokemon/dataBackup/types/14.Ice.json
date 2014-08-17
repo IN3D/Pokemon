@@ -1,0 +1,24 @@
+{
+	"name" : "Ice",
+	"index" : 14,
+	"modifiers" : {
+		"Normal" : 1,
+		"Fighting" : 1,
+		"Flying" : 2,
+		"Poison" : 1,
+		"Ground" : 2,
+		"Rock" : 1,
+		"Bug" : 1,
+		"Ghost" : 1,
+		"Steel" : 0.5,
+		"Fire" : 0.5,
+		"Water" : 0.5,
+		"Grass" : 2,
+		"Electric" : 1,
+		"Psychic" : 1,
+		"Ice" : 0.5,
+		"Dragon" : 2,
+		"Dark" : 1,
+		"Fairy" : 1
+	}
+}
