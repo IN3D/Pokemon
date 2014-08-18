@@ -25,6 +25,8 @@ namespace Pokemon
             {
                 TypeContext tcx = new TypeContext();
 
+                var type = tcx.Types.AsQueryable().First();
+
                 MessageBox.Show("Success, for now...");
             }
             catch (Exception ex)
