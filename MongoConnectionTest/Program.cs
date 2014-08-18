@@ -21,22 +21,60 @@ namespace MongoConnectionTest
                 var db = server.GetDatabase("pokemon");
                 var collection = db.GetCollection<Type>("types");
 
-                var query = Query.EQ("name", "Fire");
+                foreach (Type a in collection.FindAll())
+                {
+                    Console.WriteLine(a.index + ": " + a.name);
+                }
+
+                //AltType at = new AltType();
+
+                //at.name = "test";
+                //at.index = 0;
+                //at.modifiers.Normal = 1;
+                //at.modifiers.Fighting = 1;
+                //at.modifiers.Flying = 1;
+                //at.modifiers.Ground = 1;
+                //at.modifiers.Rock = 0.5;
+                //at.modifiers.Bug = 1;
+                //at.modifiers.Ghost = 0;
+                //at.modifiers.Steel = 0.5;
+                //at.modifiers.Fire = 1;
+                //at.modifiers.Water = 1;
+                //at.modifiers.Grass = 1;
+                //at.modifiers.Electric = 1;
+                //at.modifiers.Psychic = 1;
+                //at.modifiers.Ice = 1;
+                //at.modifiers.Dragon = 1;
+                //at.modifiers.Dark = 1;
+                //at.modifiers.Fairy = 0.5;
+
+                //collection.Save(at);
+
+
+
+
+
+
+
+
+
+
+                //var query = Query.EQ("name", "Fire");
 
                 //Type something = collection.FindOne(query);
 
-                foreach (Type t in collection.FindAll())
-                {
-                    Console.WriteLine(t.name);
-                    Console.WriteLine("================");
+                //foreach (Type t in collection.FindAll())
+                //{
+                //    Console.WriteLine(t.name);
+                //    Console.WriteLine("================");
 
-                    for (int i = 0; i < t.modifiers.Elements.Count(); i++)
-                    {
-                        Console.WriteLine(t.modifiers.Elements.ElementAt(i).Name + ": " + t.modifiers.Elements.ElementAt(i).Value);
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine();
-                }
+                //    for (int i = 0; i < t.modifiers.Elements.Count(); i++)
+                //    {
+                //        Console.WriteLine(t.modifiers.Elements.ElementAt(i).Name + ": " + t.modifiers.Elements.ElementAt(i).Value);
+                //    }
+                //    Console.WriteLine();
+                //    Console.WriteLine();
+                //}
 
 
                 Console.WriteLine();

@@ -3,10 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
-namespace Pokemon
+namespace MongoConnectionTest
 {
-    public class modifiers
+    class AltType
+    {
+        public ObjectId id { get; set; }
+        public string name { get; set; }
+        public int index { get; set; }
+        public Modifiers modifiers {get; set;}
+
+        public AltType()
+        {
+            modifiers = new Modifiers();
+        }
+    }
+
+    class Modifiers
     {
         public double Normal { get; set; }
         public double Fighting { get; set; }
@@ -26,28 +41,5 @@ namespace Pokemon
         public double Dragon { get; set; }
         public double Dark { get; set; }
         public double Fairy { get; set; }
-
-        public modifiers()
-        {
-            this.Normal = 0.0;
-            this.Fighting = 0.0;
-            this.Flying = 0.0;
-            this.Poison = 0.0;
-            this.Ground = 0.0;
-            this.Rock = 0.0;
-            this.Bug = 0.0;
-            this.Ghost = 0.0;
-            this.Steel = 0.0;
-            this.Fire = 0.0;
-            this.Water = 0.0;
-            this.Grass = 0.0;
-            this.Electric = 0.0;
-            this.Psychic = 0.0;
-            this.Ice = 0.0;
-            this.Dragon = 0.0;
-            this.Dark = 0.0;
-            this.Fairy = 0.0;
-
-        }
     }
 }

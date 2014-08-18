@@ -11,6 +11,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using MongoDB.Driver.Builders;
 
 namespace Pokemon
 {
@@ -23,11 +24,21 @@ namespace Pokemon
             // mongoDB test
             try
             {
-                TypeContext tcx = new TypeContext();
+                //MessageBox.Show("Success, for now...");
 
-                var type = tcx.Types.AsQueryable().First();
+                MongoClient client = new MongoClient("mongodb://Application:mm3LhteFxx8Q@ds063449.mongolab.com:63449/pokemon");
+                var server = client.GetServer();
+                var db = server.GetDatabase("pokemon");
 
-                MessageBox.Show("Success, for now...");
+                var collection = db.GetCollection<Type>("types");
+
+                MongoCollection<Type> types = db.GetCollection<Type>("types");
+
+                foreach (Type t in types.FindAll())
+                {
+                    listBox1.Items.Add(t.index + ": " + t.name);
+                }
+
             }
             catch (Exception ex)
             {
