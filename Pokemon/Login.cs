@@ -16,29 +16,47 @@ namespace Pokemon
 {
     public partial class Login : Form
     {
+        Pokemon.Model.Client client = new Pokemon.Model.Client();
+
         public Login()
         {
             InitializeComponent();
+        }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
             try
             {
-                Pokemon.Model.Client c = new Pokemon.Model.Client();
-                MongoCollection<Pokemon.Core.User> userCollection = c.getCollection<Pokemon.Core.User>("users");
+                var users = client.getCollection<Pokemon.Core.User>("users");
 
-                StringBuilder sb = new StringBuilder();
+                Pokemon.Core.User u1 = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName == txtUserName.Text) &&
+                                                                                        (u.Password == txtPassword.Text)));
 
-                foreach ( Pokemon.Core.User u in userCollection.FindAll())
-                {
-                    sb.Append(u.UserName + ": " + u.Developer.ToString() + "\n");
-                }
+                MessageBox.Show(u1.id + "\n" + u1.UserName + " " + u1.Password);
 
-                MessageBox.Show(sb.ToString());
-
+                clearTextBoxes();
+            }
+            catch (InvalidOperationException invEx)
+            {
+                MessageBox.Show("Invalid login credentials!\nPlease try again.");
+                clearTextBoxes();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: \n" + ex.Message);
+                MessageBox.Show("An error occurred!:\n" + ex.Message);
+                clearTextBoxes();
             }
+        }
+
+        private void clearTextBoxes()
+        {
+            txtUserName.Text = "";
+            txtPassword.Text = "";
         }
     }
 }
