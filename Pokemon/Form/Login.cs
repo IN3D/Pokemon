@@ -11,6 +11,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Communication;
 using MongoDB.Driver.Linq;
 using MongoDB.Bson;
+using Pokemon.Model;
 
 namespace Pokemon
 {
@@ -34,12 +35,36 @@ namespace Pokemon
             {
                 var users = client.getCollection<Pokemon.Core.User>("users");
 
-                Pokemon.Core.User u1 = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName == txtUserName.Text) &&
+                Pokemon.Core.User user = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName == txtUserName.Text) &&
                                                                                         (u.Password == txtPassword.Text)));
 
-                MessageBox.Show(u1.id + "\n" + u1.UserName + " " + u1.Password);
+                MessageBox.Show(user.id + "\n" + user.UserName + " " + user.Password);
 
                 clearTextBoxes();
+
+                if (user != null)
+                {
+                    Globals.login.copyAssignment(user);
+
+                    Main m = new Main();
+                    this.Hide();
+                    // open main, and set it to be
+                    // the main form.
+                    m.ShowDialog();
+
+                    // clean up and close.
+                    m = null;
+                    this.Close();
+                }
+                else
+                {
+                    // this should never happen, the catch
+                    // should intervene before this...
+                    MessageBox.Show("Something has gone very wrong and the program needs to exit.");
+
+                    // something is very wrong, terminate everything...
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             catch (InvalidOperationException invEx)
             {
@@ -48,7 +73,7 @@ namespace Pokemon
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred!:\n" + ex.Message);
+                MessageBox.Show("An error occurred:\n" + ex.Message);
                 clearTextBoxes();
             }
         }
