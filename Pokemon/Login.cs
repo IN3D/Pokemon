@@ -14,28 +14,22 @@ using MongoDB.Bson;
 
 namespace Pokemon
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
 
             try
             {
-                MongoClient client = new MongoClient("mongodb://Application:mm3LhteFxx8Q@ds063449.mongolab.com:63449/pokemon");
-                var server = client.GetServer();
-
-                var db = server.GetDatabase("pokemon");
-
-                var collection = db.GetCollection<Type>("types");
-
-                MongoCollection<Type> typesCollecton = collection;
+                Pokemon.Model.Client c = new Pokemon.Model.Client();
+                MongoCollection<Pokemon.Core.User> userCollection = c.getCollection<Pokemon.Core.User>("users");
 
                 StringBuilder sb = new StringBuilder();
 
-                foreach ( Type t in typesCollecton.FindAll())
+                foreach ( Pokemon.Core.User u in userCollection.FindAll())
                 {
-                    sb.Append(t.index + ": " + t.name + "\n");
+                    sb.Append(u.UserName + ": " + u.Developer.ToString() + "\n");
                 }
 
                 MessageBox.Show(sb.ToString());
@@ -43,7 +37,7 @@ namespace Pokemon
             }
             catch (Exception ex)
             {
-                
+                MessageBox.Show("An error occurred: \n" + ex.Message);
             }
         }
     }
