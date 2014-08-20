@@ -35,7 +35,7 @@ namespace Pokemon
             {
                 var users = client.getCollection<Pokemon.Core.User>("users");
 
-                Pokemon.Core.User user = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName == txtUserName.Text) &&
+                Pokemon.Core.User user = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName.ToLower() == txtUserName.Text.ToLower()) &&
                                                                                         (u.Password == txtPassword.Text)));
 
                 clearTextBoxes();
