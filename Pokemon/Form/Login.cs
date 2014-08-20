@@ -38,8 +38,6 @@ namespace Pokemon
                 Pokemon.Core.User user = users.AsQueryable<Pokemon.Core.User>().Single<Pokemon.Core.User>(u => ((u.UserName == txtUserName.Text) &&
                                                                                         (u.Password == txtPassword.Text)));
 
-                MessageBox.Show(user.id + "\n" + user.UserName + " " + user.Password);
-
                 clearTextBoxes();
 
                 if (user != null)
@@ -48,6 +46,7 @@ namespace Pokemon
 
                     Main m = new Main();
                     this.Hide();
+
                     // open main, and set it to be
                     // the main form.
                     m.ShowDialog();
