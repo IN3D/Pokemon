@@ -12,7 +12,8 @@ namespace Pokemon.Model
         {
             byte[] data = System.Text.Encoding.ASCII.GetBytes(password);
             data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
-            return System.Text.Encoding.ASCII.GetString(data);
+
+            return toHex(data);
         }
 
         public static string getSalt(int size)
@@ -21,7 +22,23 @@ namespace Pokemon.Model
             byte[] buff = new byte[size];
             rng.GetBytes(buff);
 
-            return Convert.ToBase64String(buff);
+            return toHex(buff);
+        }
+
+        public static string getPoint()
+        {
+            Random rnd = new Random();
+            int i = rnd.Next(1, 65536);
+            return String.Format("{0:x4}", i);
+        }
+
+        private static string toHex(byte[] bytes)
+        {
+            StringBuilder hex = new StringBuilder(bytes.Length * 2);
+            foreach (byte b in bytes)
+                hex.AppendFormat("{0:x2}", b);
+
+            return hex.ToString();
         }
     }
 }

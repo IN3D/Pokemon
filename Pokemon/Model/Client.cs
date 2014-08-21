@@ -27,6 +27,13 @@ namespace Pokemon.Model
             MongoCollection<T> collection = db.GetCollection<T>(collectionName);
             return collection;
         }
+
+        public MongoCollection genericCollection (string collectionName)
+        {
+            var db = server.GetDatabase("pokemon");
+            MongoCollection collection = db.GetCollection(collectionName);
+            return collection;
+        }
         
     }
 }
