@@ -20,24 +20,19 @@ namespace Pokemon
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            string oldPassHashedAndSalted = (Globals.login.Salt + Security.generateHash(txtOldPassword.Text));
-
-            if (oldPassHashedAndSalted == (Globals.login.Salt + Globals.login.Password))
+            if (Security.validatePassword(txtOldPassword.Text, Globals.login.Password))
             {
                 if (txtNewPassword.Text == txtConfirm.Text)
                 {
                     try
                     {
-                        string newSalt = Security.getSalt(10);
-                        Globals.login.Password = (Security.getPoint() + newSalt + Security.generateHash(txtNewPassword.Text));
-                        Globals.login.Salt = newSalt;
+                        string newPass = Security.createHash(txtNewPassword.Text);
 
                         Client client = new Client();
-
                         var userCollection = client.getCollection<Pokemon.Core.User>("users");
 
+                        Globals.login.Password = newPass;
                         userCollection.Save<Pokemon.Core.User>(Globals.login);
-                        Globals.login.Password = Globals.login.Password.Remove(0, 4);
 
                         MessageBox.Show("Password successfully changed!");
                     }

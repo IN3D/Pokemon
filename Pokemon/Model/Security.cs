@@ -3,42 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Pokemon.Model
 {
     public static class Security
     {
-        public static string generateHash(string password)
-        {
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(password);
-            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+        private const int SBS = 24;
+        private const int HBS = 24;
+        private const int PIT = 1000;
+        private const int II = 0;
+        private const int SI = 1;
+        private const int PI = 2;
 
-            return toHex(data);
+        public static string createHash(string p)
+        {
+            RNGCryptoServiceProvider crng = new RNGCryptoServiceProvider();
+            byte[] s = new byte[SBS];
+            crng.GetBytes(s);
+            byte[] h = PBKDF2(p, s, PIT, HBS);
+            return PIT + ":" +
+                Convert.ToBase64String(s) + ":" + Convert.ToBase64String(h);
         }
 
-        public static string getSalt(int size)
+        public static bool validatePassword(string p, string c)
         {
-            System.Security.Cryptography.RNGCryptoServiceProvider rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
-            byte[] buff = new byte[size];
-            rng.GetBytes(buff);
-
-            return toHex(buff);
+            char[] d = { ':' };
+            string[] split = c.Split(d);
+            int i  = Int32.Parse(split[II]);
+            byte[] s = Convert.FromBase64String(split[SI]);
+            byte[] h = Convert.FromBase64String(split[PI]);
+            byte[] th = PBKDF2(p, s, i, h.Length);
+            return slowEquals(h, th);
         }
 
-        public static string getPoint()
+        private static bool slowEquals(byte[] a, byte[] b)
         {
-            Random rnd = new Random();
-            int i = rnd.Next(1, 65536);
-            return String.Format("{0:x4}", i);
+            uint diff = (uint)a.Length ^ (uint)b.Length;
+            for (int i = 0; i < a.Length && i < b.Length; i++)
+                diff |= (uint)(a[i] ^ b[i]);
+            return diff == 0;
         }
 
-        private static string toHex(byte[] bytes)
+        private static byte[] PBKDF2(string p, byte[] s, int i, int o)
         {
-            StringBuilder hex = new StringBuilder(bytes.Length * 2);
-            foreach (byte b in bytes)
-                hex.AppendFormat("{0:x2}", b);
-
-            return hex.ToString();
+            Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(p, s);
+            pbkdf2.IterationCount = i;
+            return pbkdf2.GetBytes(o);
         }
     }
 }
