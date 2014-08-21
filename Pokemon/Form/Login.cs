@@ -33,19 +33,22 @@ namespace Pokemon
         {
             try
             {
-                string passHash = Pokemon.Model.Security.generateHash(txtPassword.Text);
-
-                var users = client.getCollection<Pokemon.Core.User>("users");
+                var users = client.getCollection<Pokemon.Core.User>("users").AsQueryable<Pokemon.Core.User>().Where<Pokemon.Core.User>(u => u.UserName.ToLower() == txtUserName.Text.ToLower());
 
                 Pokemon.Core.User user = new Pokemon.Core.User();
-                foreach (Pokemon.Core.User u in users.FindAllAs<Pokemon.Core.User>())
+                bool found = false;
+                foreach (Pokemon.Core.User u in users)
                 {
-                    if (u.UserName.ToLower() == txtUserName.Text.ToLower() && (u.Password.Remove(0, 4) == u.Salt + passHash))
+                    if (Pokemon.Model.Security.validatePassword(txtPassword.Text, u.Password))
                     {
                         user.copyAssignment(u);
+                        found = true;
                         break;
                     }
                 }
+
+                if (!found)
+                    throw new InvalidOperationException();
                 clearTextBoxes();
 
                 if (user.UserName != null && user.Password != null)
