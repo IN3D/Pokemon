@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Globals.cs" />
+    <Compile Include="Model\Security.cs" />
     <Compile Include="Model\StaticGameData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
