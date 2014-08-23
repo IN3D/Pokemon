@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+ * == Created ==
+ * on: Eric Hopkins
+ * by: 08/21/2014
+ *
+ * == Created ==
+ * on: Eric Hopkins
+ * by: 08/22/2014
+ *
+ * This file contains information about
+ * the encryption of user passwords.
+ *
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

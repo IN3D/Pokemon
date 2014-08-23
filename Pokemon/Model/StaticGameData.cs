@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * What am I doing here?
+ *
+ * Shouldn't this stuff just be
+ * in the globals class?
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
