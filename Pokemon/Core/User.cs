@@ -4,7 +4,7 @@
  * by: Eric Hopkins
  * 
  * == Modified ==
- * on: 08/22/2014
+ * on: 08/26/2014
  * by: Eric Hopkins
  * 
  * This file defines the class data structure for a user's login.
@@ -26,6 +26,7 @@ namespace Pokemon.Core
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool Developer { get; set; }
+        public bool StartedAdventure { get; set; }
 
         public User()
         {
@@ -42,6 +43,7 @@ namespace Pokemon.Core
             this.UserName = u.UserName;
             this.Password = u.Password;
             this.Developer = u.Developer;
+            this.StartedAdventure = u.StartedAdventure;
         }
 
         public override string ToString()
