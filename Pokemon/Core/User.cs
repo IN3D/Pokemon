@@ -1,4 +1,17 @@
-﻿using System;
+﻿/* 
+ * == Created ==
+ * on: 08/21/2014
+ * by: Eric Hopkins
+ * 
+ * == Modified ==
+ * on: 08/22/2014
+ * by: Eric Hopkins
+ * 
+ * This file defines the class data structure for a user's login.
+ * Including their unique ObjectId, UserName, Password, and anything
+ * else that should be uniquely tied to a persons account.
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

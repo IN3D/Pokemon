@@ -1,0 +1,5 @@
+This directory contains .cs files that had been written for a previous version
+of this program but have not been reassociated with the project. Whatever you
+find in this directory is not something that is currently being used by the
+program. The decision was made to put all the files away in this directory and
+pull them out as needed for future versions.
