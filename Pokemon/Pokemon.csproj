@@ -118,6 +118,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Resources\Images\Badges\" />
+    <Folder Include="Resources\Images\Items\" />
     <Folder Include="Resources\Sound\" />
     <Folder Include="UI\" />
     <Folder Include="Vendor\" />
