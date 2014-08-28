@@ -31,10 +31,12 @@ namespace Pokemon.Core
         public int CatchRate { get; set; }
         public int DexNumber { get; set; }
         public double GenderRatio { get; set; }
+        public int XPGroup { get; set; }
         protected int[] BaseStats = new int[6];
         protected int[] Types = new int[2];
         protected ObjectId[] Abilities = new ObjectId[3];
 
-        // TODO: Learn sets, natural, egg groups, move learners etc.
+        // TODO: Learn sets: natural, egg groups, move learners etc.
+        // TODO: Egg Groups
     }
 }
