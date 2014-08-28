@@ -55,16 +55,7 @@ namespace Pokemon
                 {
                     Globals.login.copyAssignment(user);
 
-                    Main m = new Main();
-                    this.Hide();
-
-                    // open main, and set it to be
-                    // the main form.
-                    m.ShowDialog();
-
-                    // clean up and close.
-                    m = null;
-                    this.Close();
+                    decideDestinationPage(user);
                 }
                 else
                 {
@@ -92,6 +83,27 @@ namespace Pokemon
         {
             txtUserName.Text = "";
             txtPassword.Text = "";
+        }
+
+        private void decideDestinationPage(Pokemon.Core.User u)
+        {
+            if (!u.StartedAdventure)
+            {
+                // TODO: create the page for setup
+            }
+            else
+            {
+                Main m = new Main();
+                this.Hide();
+
+                // open main, and set it to be
+                // the main form.
+                m.ShowDialog();
+
+                // clean up and close.
+                m = null;
+                this.Close();
+            }
         }
     }
 }
