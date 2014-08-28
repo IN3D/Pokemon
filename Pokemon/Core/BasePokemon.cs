@@ -29,12 +29,15 @@ namespace Pokemon.Core
         public ObjectId id { get; set; }
         public string SpeciesName { get; set; }
         public int CatchRate { get; set; }
+        public int HatchTimeMin { get; set; }
+        public int HatchTimeMax { get; set; }
         public int DexNumber { get; set; }
         public double GenderRatio { get; set; }
         public int XPGroup { get; set; }
         protected int[] BaseStats = new int[6];
         protected int[] Types = new int[2];
         protected ObjectId[] Abilities = new ObjectId[3];
+        protected int[] EVYield = new int[6];
 
         // TODO: Learn sets: natural, egg groups, move learners etc.
         // TODO: Egg Groups
