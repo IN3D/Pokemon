@@ -26,6 +26,13 @@ namespace Pokemon.Core
         public int XPToNextLevel { get; set; }
         public int XPCurrent { get; set; }
         public string BallType { get; set; }
+        public bool isShiny { get; set; }
+        public bool isSuperShiny { get; set; }
+        // I might not want to keep this an int, but I'm
+        // operating under the assumption that I'll use this
+        // value as a key to a conditions array.
+        public int Condition { get; set; }
+        public int Friendship { get; set; }
 
         protected BasePokemon basePkm;
         protected int[] EVs = new int[6];
