@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pokemon.Model;
+using MongoDB.Driver.Builders;
 
 namespace Pokemon
 {
@@ -32,7 +33,10 @@ namespace Pokemon
                         var userCollection = client.getCollection<Pokemon.Core.User>("users");
 
                         Globals.login.Password = newPass;
-                        userCollection.Save<Pokemon.Core.User>(Globals.login);
+
+                        var query = Query<Pokemon.Core.User>.EQ(u => u.id, Globals.login.id);
+                        var update = Update<Pokemon.Core.User>.Set(u => u.Password, Globals.login.Password);
+                        userCollection.Update(query, update);
 
                         MessageBox.Show("Password successfully changed!");
                     }
