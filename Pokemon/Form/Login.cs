@@ -87,12 +87,12 @@ namespace Pokemon
 
         private void decideDestinationPage(Pokemon.Core.User u)
         {
-            if (!u.StartedAdventure)
-            {
-                // TODO: create the page for setup
-            }
-            else
-            {
+            //if (!u.StartedAdventure)
+            //{
+            //    // TODO: create the page for setup
+            //}
+            //else
+            //{
                 Main m = new Main();
                 this.Hide();
 
@@ -103,7 +103,7 @@ namespace Pokemon
                 // clean up and close.
                 m = null;
                 this.Close();
-            }
+            //}
         }
     }
 }
