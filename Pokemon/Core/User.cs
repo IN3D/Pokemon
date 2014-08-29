@@ -17,9 +17,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Pokemon.Core
-{
+{  
     public class User
     {
         public ObjectId id { get; set; }
@@ -27,6 +29,8 @@ namespace Pokemon.Core
         public string Password { get; set; }
         public bool Developer { get; set; }
         public bool StartedAdventure { get; set; }
+        [BsonElement("Pokedex")]
+        private int[] _pokedex = new int[721];
 
         public User()
         {
@@ -44,7 +48,20 @@ namespace Pokemon.Core
             this.Password = u.Password;
             this.Developer = u.Developer;
             this.StartedAdventure = u.StartedAdventure;
+            for (int i = 0; i < u._pokedex.Length; i++)
+                this._pokedex[i] = u._pokedex[i];
         }
+
+        public void updatePokedex(int index, int value)
+        {
+            // take the passed index down one, so it will
+            // work with the 0 based index array.
+            index--;
+
+            if (this._pokedex[index] < value)
+                this._pokedex[index] = value;
+        }
+
 
         public override string ToString()
         {
