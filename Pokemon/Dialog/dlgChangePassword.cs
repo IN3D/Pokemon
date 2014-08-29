@@ -34,9 +34,7 @@ namespace Pokemon
 
                         Globals.login.Password = newPass;
 
-                        var query = Query<Pokemon.Core.User>.EQ(u => u.id, Globals.login.id);
-                        var update = Update<Pokemon.Core.User>.Set(u => u.Password, Globals.login.Password);
-                        userCollection.Update(query, update);
+                        Globals.login.updatePassword();
 
                         MessageBox.Show("Password successfully changed!");
                     }

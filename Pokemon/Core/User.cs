@@ -19,6 +19,8 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver.Builders;
+using Pokemon.Model;
 
 namespace Pokemon.Core
 {  
@@ -60,6 +62,16 @@ namespace Pokemon.Core
 
             if (this._pokedex[index] < value)
                 this._pokedex[index] = value;
+        }
+
+        public void updatePassword()
+        {
+            Client client = new Client();
+            var userCollection = client.getCollection<User>("users");
+
+            var query = Query<User>.EQ(u => u.id, this.id);
+            var update = Update<User>.Set(u => u.Password, this.Password);
+            userCollection.Update(query, update);
         }
 
 
