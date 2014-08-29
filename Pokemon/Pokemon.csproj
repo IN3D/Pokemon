@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\BasePokemon.cs" />
+    <Compile Include="Core\Pokemon.cs" />
     <Compile Include="Core\Types.cs" />
     <Compile Include="Core\User.cs" />
     <Compile Include="Dialog\dlgChangePassword.cs">
