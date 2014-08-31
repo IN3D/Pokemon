@@ -45,6 +45,9 @@ namespace Pokemon
 
         private void BeginAdventure_Load(object sender, EventArgs e)
         {
+            // this button is only necessary once the user has moved forward
+            // in the process, so it is disabled here.
+            btnGoBack.Enabled = false;
             setImages();
             lblCurrentRegion.Text = regionsList[currentListIndex].Name;
             lblDescription.Text = regionsList[currentListIndex].Descr;
@@ -96,20 +99,22 @@ namespace Pokemon
             this.pbxPrevious.Image = getImagebyIndex(getPrevious());
         }
 
-        private void btnCycleRight_Click(object sender, EventArgs e)
+        private void updateText()
         {
-            setNext();
-            setImages();
             lblCurrentRegion.Text = regionsList[currentListIndex].Name;
             lblDescription.Text = regionsList[currentListIndex].Descr;
         }
 
-        private void btnCycleLeft_Click(object sender, EventArgs e)
+        private void btnCycle_Click(object sender, EventArgs e)
         {
-            setPrevious();
+            Button clicked = (Button)sender;
+
+            if (clicked.Text == "◀")
+                setPrevious();
+            else
+                setNext();
             setImages();
-            lblCurrentRegion.Text = regionsList[currentListIndex].Name;
-            lblDescription.Text = regionsList[currentListIndex].Descr;
+            updateText();
         }
     }
 }

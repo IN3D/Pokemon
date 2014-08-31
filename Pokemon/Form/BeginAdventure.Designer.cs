@@ -82,7 +82,7 @@
             this.btnCycleRight.TabIndex = 3;
             this.btnCycleRight.Text = "▶";
             this.btnCycleRight.UseVisualStyleBackColor = true;
-            this.btnCycleRight.Click += new System.EventHandler(this.btnCycleRight_Click);
+            this.btnCycleRight.Click += new System.EventHandler(this.btnCycle_Click);
             // 
             // btnCycleLeft
             // 
@@ -93,7 +93,7 @@
             this.btnCycleLeft.TabIndex = 4;
             this.btnCycleLeft.Text = "◀";
             this.btnCycleLeft.UseVisualStyleBackColor = true;
-            this.btnCycleLeft.Click += new System.EventHandler(this.btnCycleLeft_Click);
+            this.btnCycleLeft.Click += new System.EventHandler(this.btnCycle_Click);
             // 
             // btnGoBack
             // 
