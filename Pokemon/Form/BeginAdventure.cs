@@ -12,6 +12,10 @@ namespace Pokemon
 {
     public partial class BeginAdventure : Form
     {
+        // some needed variables
+        int currentListIndex = 0;
+        
+        
         // this is just a small helper class to organize data
         // I might actually come back and make it a struct
         private class MenuInfo
@@ -29,7 +33,7 @@ namespace Pokemon
         }
 
         // a list of regions to iterate through
-        protected MenuInfo[] regionsList = new MenuInfo[6] { new MenuInfo(1, "Kanto", "Kanto description"),
+        private MenuInfo[] regionsList = new MenuInfo[6] { new MenuInfo(1, "Kanto", "Kanto description"),
         new MenuInfo(2, "Johto", "Johto description"), new MenuInfo(3, "Hoenn", "Hoenn description"),
         new MenuInfo(4, "Sinnoh", "Sinnoh description"), new MenuInfo(5, "Unova", "Unova description"),
         new MenuInfo(6, "Kalos", "Kalos description") };
@@ -39,9 +43,57 @@ namespace Pokemon
             InitializeComponent();
         }
 
-        private void btnDone_Click(object sender, EventArgs e)
+        private void BeginAdventure_Load(object sender, EventArgs e)
         {
-            panelGetInfo.Hide();
+            setImages();
+            lblCurrentRegion.Text = regionsList[currentListIndex].Name;
+            lblDescription.Text = regionsList[currentListIndex].Descr;
+        }
+
+        private int getNext()
+        {
+            if (currentListIndex == 5)
+                return 0;
+            else
+                return (currentListIndex + 1);
+        }
+
+        private void setNext()
+        {
+            if (currentListIndex == 5)
+                currentListIndex = 0;
+            else
+                ++currentListIndex;
+        }
+
+        private int getPrevious()
+        {
+            if (currentListIndex == 0)
+                return 5;
+            else
+                return (currentListIndex - 1);
+        }
+
+        private void setPrevious()
+        {
+            if (currentListIndex == 0)
+                currentListIndex = 5;
+            else
+                --currentListIndex;
+        }
+
+        private Image getImagebyIndex(int i)
+        {
+            return Image.FromFile("..//..//Resources//Images//Regions//" + regionsList[i].Name + ".png");
+        }
+
+        private void setImages()
+        {
+            this.pbxCurrent.Image = getImagebyIndex(currentListIndex);
+            int test1 = getNext();
+            this.pbxNext.Image = getImagebyIndex(getNext());
+            int test2 = getPrevious();
+            this.pbxPrevious.Image = getImagebyIndex(getPrevious());
         }
     }
 }
