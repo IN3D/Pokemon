@@ -95,5 +95,21 @@ namespace Pokemon
             int test2 = getPrevious();
             this.pbxPrevious.Image = getImagebyIndex(getPrevious());
         }
+
+        private void btnCycleRight_Click(object sender, EventArgs e)
+        {
+            setNext();
+            setImages();
+            lblCurrentRegion.Text = regionsList[currentListIndex].Name;
+            lblDescription.Text = regionsList[currentListIndex].Descr;
+        }
+
+        private void btnCycleLeft_Click(object sender, EventArgs e)
+        {
+            setPrevious();
+            setImages();
+            lblCurrentRegion.Text = regionsList[currentListIndex].Name;
+            lblDescription.Text = regionsList[currentListIndex].Descr;
+        }
     }
 }

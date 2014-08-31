@@ -49,6 +49,7 @@
             this.pbxCurrent.Location = new System.Drawing.Point(260, 101);
             this.pbxCurrent.Name = "pbxCurrent";
             this.pbxCurrent.Size = new System.Drawing.Size(328, 179);
+            this.pbxCurrent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxCurrent.TabIndex = 0;
             this.pbxCurrent.TabStop = false;
             // 
@@ -58,6 +59,7 @@
             this.pbxPrevious.Location = new System.Drawing.Point(71, 125);
             this.pbxPrevious.Name = "pbxPrevious";
             this.pbxPrevious.Size = new System.Drawing.Size(328, 179);
+            this.pbxPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxPrevious.TabIndex = 1;
             this.pbxPrevious.TabStop = false;
             // 
@@ -67,6 +69,7 @@
             this.pbxNext.Location = new System.Drawing.Point(449, 125);
             this.pbxNext.Name = "pbxNext";
             this.pbxNext.Size = new System.Drawing.Size(328, 179);
+            this.pbxNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxNext.TabIndex = 2;
             this.pbxNext.TabStop = false;
             // 
@@ -79,6 +82,7 @@
             this.btnCycleRight.TabIndex = 3;
             this.btnCycleRight.Text = "▶";
             this.btnCycleRight.UseVisualStyleBackColor = true;
+            this.btnCycleRight.Click += new System.EventHandler(this.btnCycleRight_Click);
             // 
             // btnCycleLeft
             // 
@@ -89,6 +93,7 @@
             this.btnCycleLeft.TabIndex = 4;
             this.btnCycleLeft.Text = "◀";
             this.btnCycleLeft.UseVisualStyleBackColor = true;
+            this.btnCycleLeft.Click += new System.EventHandler(this.btnCycleLeft_Click);
             // 
             // btnGoBack
             // 
