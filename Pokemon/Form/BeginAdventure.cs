@@ -100,6 +100,12 @@ namespace Pokemon
             {
                 // second pass
                 selectedStartIndex = currentListIndex;
+                pnlProfessorTalk.Enabled = true;
+                pnlProfessorTalk.Visible = true;
+
+                
+                pbxProfessor.Image = Image.FromFile("..//..//Resources//Images//Characters//Large//Professor_" +
+                    professorNames[selectedStartIndex] + ".png");
             }
         }
 
@@ -115,8 +121,6 @@ namespace Pokemon
 #endregion
 
         #region Private_Methods
-
-
         private int getNext()
         {
             if (currentListIndex == 5)
@@ -166,8 +170,6 @@ namespace Pokemon
             lblCurrentRegion.Text = regionsList[currentListIndex].Name;
             lblDescription.Text = regionsList[currentListIndex].Descr;
         }
-
-
         #endregion
     }
 }
