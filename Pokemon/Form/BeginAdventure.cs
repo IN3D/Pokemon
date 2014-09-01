@@ -33,10 +33,10 @@ namespace Pokemon
         }
 
         // a list of regions to iterate through
-        private MenuInfo[] regionsList = new MenuInfo[6] { new MenuInfo(1, "Kanto", "Kanto description"),
-        new MenuInfo(2, "Johto", "Johto description"), new MenuInfo(3, "Hoenn", "Hoenn description"),
-        new MenuInfo(4, "Sinnoh", "Sinnoh description"), new MenuInfo(5, "Unova", "Unova description"),
-        new MenuInfo(6, "Kalos", "Kalos description") };
+        private MenuInfo[] regionsList = new MenuInfo[6] { new MenuInfo(1, "Kanto", "One of the smaller regions in the world. Kanto is largely made up of flat grassland. Of all the regions Kanto is one of the most technologically advanced. Kanto leads the world in Pokemon technology, the modern Pokeball being a result of developments from the Kanto region."),
+        new MenuInfo(2, "Johto", "Closely related to the Kanto region by virtue of neighboring it. Johto is a more traditional region than Kanto, but still has some larger metropolitan areas like Goldenrod City."), new MenuInfo(3, "Hoenn", "The most natural regions that exists. Hoenn lacks the the larger metropolitan cities like other regions. Hoenn also has significantly more water than most of the other regions."),
+        new MenuInfo(4, "Sinnoh", "The most traditional of all the regions in the world. Sinnoh is steeped in local myths and legends."), new MenuInfo(5, "Unova", "The most urbanized of all the regions. Unova has massive cities."),
+        new MenuInfo(6, "Kalos", "A region where the nobility still have a significant place in society. Kalos is very large, on the scale of Unova.") };
         
         public BeginAdventure()
         {
