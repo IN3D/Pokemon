@@ -39,9 +39,14 @@
             this.lblCurrentRegion = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.pnlProfessorTalk = new System.Windows.Forms.Panel();
+            this.pbxProfessor = new System.Windows.Forms.PictureBox();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.lblSpeech = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNext)).BeginInit();
+            this.pnlProfessorTalk.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProfessor)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxCurrent
@@ -148,10 +153,41 @@
             // 
             // pnlProfessorTalk
             // 
+            this.pnlProfessorTalk.Controls.Add(this.lblSpeech);
+            this.pnlProfessorTalk.Controls.Add(this.btnNext);
+            this.pnlProfessorTalk.Controls.Add(this.pbxProfessor);
             this.pnlProfessorTalk.Location = new System.Drawing.Point(9, 13);
             this.pnlProfessorTalk.Name = "pnlProfessorTalk";
             this.pnlProfessorTalk.Size = new System.Drawing.Size(827, 417);
             this.pnlProfessorTalk.TabIndex = 10;
+            // 
+            // pbxProfessor
+            // 
+            this.pbxProfessor.Location = new System.Drawing.Point(3, 3);
+            this.pbxProfessor.Name = "pbxProfessor";
+            this.pbxProfessor.Size = new System.Drawing.Size(821, 411);
+            this.pbxProfessor.TabIndex = 0;
+            this.pbxProfessor.TabStop = false;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(740, 386);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // lblSpeech
+            // 
+            this.lblSpeech.BackColor = System.Drawing.Color.White;
+            this.lblSpeech.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSpeech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSpeech.Location = new System.Drawing.Point(143, 312);
+            this.lblSpeech.Name = "lblSpeech";
+            this.lblSpeech.Size = new System.Drawing.Size(591, 97);
+            this.lblSpeech.TabIndex = 2;
+            this.lblSpeech.Text = "lblSpeech";
             // 
             // BeginAdventure
             // 
@@ -177,6 +213,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPrevious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNext)).EndInit();
+            this.pnlProfessorTalk.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProfessor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +233,9 @@
         private System.Windows.Forms.Label lblCurrentRegion;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Panel pnlProfessorTalk;
+        private System.Windows.Forms.PictureBox pbxProfessor;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Label lblSpeech;
 
     }
 }

@@ -41,6 +41,17 @@ namespace Pokemon
         new MenuInfo(5, "Unova", "The most urbanized of all the regions. Unova has massive cities."),
         new MenuInfo(6, "Kalos", "A region where the nobility still have a significant place in society. Kalos is very large, on the scale of Unova.")
         };
+
+        private string[] professorNames = new string[6]
+        {
+            "Oak",
+            "Elm",
+            "Birch",
+            "Rowan",
+            "Juniper",
+            "Sycamore"
+        };
+
         #endregion
 
         public BeginAdventure()
