@@ -38,6 +38,7 @@
             this.lblPrompt = new System.Windows.Forms.Label();
             this.lblCurrentRegion = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.pnlProfessorTalk = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNext)).BeginInit();
@@ -103,6 +104,7 @@
             this.btnGoBack.TabIndex = 5;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // btnGoForward
             // 
@@ -112,6 +114,7 @@
             this.btnGoForward.TabIndex = 6;
             this.btnGoForward.Text = "Go!";
             this.btnGoForward.UseVisualStyleBackColor = true;
+            this.btnGoForward.Click += new System.EventHandler(this.btnGoForward_Click);
             // 
             // lblPrompt
             // 
@@ -127,7 +130,7 @@
             // 
             this.lblCurrentRegion.AutoSize = true;
             this.lblCurrentRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentRegion.Location = new System.Drawing.Point(362, 322);
+            this.lblCurrentRegion.Location = new System.Drawing.Point(380, 325);
             this.lblCurrentRegion.Name = "lblCurrentRegion";
             this.lblCurrentRegion.Size = new System.Drawing.Size(125, 20);
             this.lblCurrentRegion.TabIndex = 8;
@@ -143,12 +146,20 @@
             this.lblDescription.TabIndex = 9;
             this.lblDescription.Text = "[Description text goes here]";
             // 
+            // pnlProfessorTalk
+            // 
+            this.pnlProfessorTalk.Location = new System.Drawing.Point(9, 13);
+            this.pnlProfessorTalk.Name = "pnlProfessorTalk";
+            this.pnlProfessorTalk.Size = new System.Drawing.Size(827, 417);
+            this.pnlProfessorTalk.TabIndex = 10;
+            // 
             // BeginAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(848, 442);
+            this.Controls.Add(this.pnlProfessorTalk);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblCurrentRegion);
             this.Controls.Add(this.lblPrompt);
@@ -161,7 +172,7 @@
             this.Controls.Add(this.pbxPrevious);
             this.Name = "BeginAdventure";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BeginAdventure";
+            this.Text = "Begin Your Adventure!";
             this.Load += new System.EventHandler(this.BeginAdventure_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPrevious)).EndInit();
@@ -183,6 +194,7 @@
         private System.Windows.Forms.Label lblPrompt;
         private System.Windows.Forms.Label lblCurrentRegion;
         private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Panel pnlProfessorTalk;
 
     }
 }
