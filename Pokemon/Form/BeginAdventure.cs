@@ -7,11 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pokemon.Core;
 
 namespace Pokemon
 {
     public partial class BeginAdventure : Form
     {
+        // crap I'm just throwing in to force an upload to the database
+        BasePokemon bulbasaur = new BasePokemon("Bulbasaur", 45, 5355, 5609, 001, 87.5, 3, new int[] { 45, 49, 49, 65, 65, 45 }, new int[] { 11, 3 }, new int[] { 0, 0, 0, 1, 0, 0 });
+        BasePokemon ivysaur = new BasePokemon("Ivysaur", 45, 5355, 5609, 002, 87.5, 3, new int[] { 60, 62, 63, 80, 80, 60 }, new int[] { 11, 3 }, new int[] { 0, 0, 0, 1, 1, 0 });
+        BasePokemon venusaur = new BasePokemon("Venusaur", 45, 5355, 5609, 003, 87.5, 3, new int[] { 80, 82, 83, 100, 100, 80 }, new int[] { 11, 3 }, new int[] { 0, 0, 0, 2, 1, 0 });
+        BasePokemon charmander = new BasePokemon("Charmander", 45, 5355, 5609, 004, 87.5, 3, new int[] { 39, 52, 43, 60, 50, 65 }, new int[] { 9 }, new int[] { 0, 0, 0, 0, 0, 1 });
+        BasePokemon charmeleon = new BasePokemon("Charmeleon", 45, 5355, 5609, 005, 87.5, 3, new int[] { 58, 64, 58, 80, 65, 80 }, new int[] { 9 }, new int[] { 0, 0, 0, 1, 0, 1 });
+        BasePokemon charizard = new BasePokemon("Charizard", 45, 5355, 5609, 006, 87.5, 3, new int[] { 78, 84, 78, 109, 85, 100 }, new int[] { 9, 2 }, new int[] { 0, 0, 0, 3, 0, 0 });
+        BasePokemon squirtle = new BasePokemon("Squirtle", 45, 5355, 5609, 007, 87.5, 3, new int[] { 44, 48, 65, 50, 64, 43 }, new int[] { 10 }, new int[] { 0, 0, 1, 0, 0, 0 });
+        BasePokemon wartortle = new BasePokemon("Wartortle", 45, 5355, 5609, 008, 87.5, 3, new int[] { 59, 63, 80, 65, 80, 58 }, new int[] { 10 }, new int[] { 0, 0, 1, 0, 1, 0 });
+        BasePokemon blastoise = new BasePokemon("Blastoise", 45, 5355, 5609, 009, 87.5, 3, new int[] { 79, 83, 100, 85, 105, 78 }, new int[] { 10 }, new int[] { });
+
+        // end crap
+        
         #region Member_Variables
         private class MenuInfo
         {
@@ -62,6 +76,16 @@ namespace Pokemon
         #region Event_Handlers
         private void BeginAdventure_Load(object sender, EventArgs e)
         {
+            // CRAP
+
+            Pokemon.Model.Client client = new Pokemon.Model.Client();
+            var basePokemonCollection = client.getCollection<BasePokemon>("basePokemon");
+
+            basePokemonCollection.Save(bulbasaur);
+            // END CRAP
+            
+            
+            
             // this button is only necessary once the user has moved forward
             // in the process, so it is disabled here.
             pnlProfessorTalk.Enabled = false;
